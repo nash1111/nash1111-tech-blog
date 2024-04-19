@@ -28,6 +28,9 @@ export default function Index() {
           <a target="_blank" href="https://remix.run/docs" rel="noreferrer">
             Remix Docs
           </a>
+          <h1 className="text-3xl font-bold underline">
+      Hello world!
+    </h1>
         </li>
       </ul>
     </div>
