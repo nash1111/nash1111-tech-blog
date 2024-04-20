@@ -16,7 +16,7 @@ const BabylonScene = () => {
 
             const light = new HemisphericLight("light", new Vector3(1, 1, 0), scene);
 
-            SceneLoader.ImportMesh("", "public/", "Neutral_M.obj", scene, function (meshes) {
+            SceneLoader.ImportMesh("", "/", "Neutral_M.obj", scene, function (meshes) {
                 scene.createDefaultCameraOrLight(true, true, true);
                 scene.createDefaultEnvironment();
             });
