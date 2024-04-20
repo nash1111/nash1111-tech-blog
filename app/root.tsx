@@ -7,6 +7,9 @@ import {
   ScrollRestoration,
 } from "@remix-run/react";
 import stylesheet from "~/tailwind.css?url";
+import { Header } from "./components/Header";
+import { Footer } from "./components/Footer";
+
 
 export const links: LinksFunction = () => [
   { rel: "stylesheet", href: stylesheet },
@@ -31,5 +34,12 @@ export function Layout({ children }: { children: React.ReactNode }) {
 }
 
 export default function App() {
-  return <Outlet />;
+  return (
+    <div className="flex flex-col min-h-screen">
+      <Header />
+      <div className="flex-grow">
+        <Outlet />
+      </div>
+      <Footer />
+    </div>);
 }
