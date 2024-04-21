@@ -21,6 +21,11 @@ const BabylonScene = () => {
                 scene.createDefaultEnvironment();
             });
 
+            SceneLoader.ImportMesh("", "/", "Neutral_M.obj", scene, function (meshes) {
+                scene.createDefaultCameraOrLight(true, true, true);
+                scene.createDefaultEnvironment();
+            });
+
             engine.runRenderLoop(() => {
                 scene.render();
             });
