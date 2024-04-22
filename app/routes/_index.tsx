@@ -2,10 +2,10 @@ import type { MetaFunction } from "@remix-run/cloudflare";
 
 export const meta: MetaFunction = () => {
   return [
-    { title: "New Remix App" },
+    { title: "nash1111 techblog" },
     {
       name: "description",
-      content: "Welcome to Remix! Using Vite and Cloudflare!",
+      content: "nash1111 techblog with Remix and Vite on Cloudflare Pages.",
     },
   ];
 };
@@ -29,8 +29,8 @@ export default function Index() {
             Remix Docs
           </a>
           <h1 className="text-3xl font-bold underline">
-      Hello world!
-    </h1>
+            Hello world!
+          </h1>
         </li>
       </ul>
     </div>

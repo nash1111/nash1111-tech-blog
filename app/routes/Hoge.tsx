@@ -1,4 +1,5 @@
 import { Button } from "~/components/ui/button"
+import BabylonScene from "~/components/BabylonScene"
 
 
 export default function Hoge() {
@@ -6,6 +7,7 @@ export default function Hoge() {
         <>
             <div>
                 <Button>Click me</Button>
+                <BabylonScene />
             </div>
         </>
     )
