@@ -26,7 +26,7 @@ export const Header = () => {
                         <NavigationMenuItem>
                             <NavigationMenuTrigger>Components</NavigationMenuTrigger>
                             <NavigationMenuContent>
-                                <ul className="grid gap-3 p-4 grid-cols-1">
+                                <ul>
                                     {components.map((component) => (
                                         <div
                                             key={component.id}
