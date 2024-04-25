@@ -12,7 +12,8 @@
     "typecheck": "tsc",
     "typegen": "wrangler types",
     "preview": "bun run build && wrangler pages dev",
-    "cf-typegen": "wrangler types"
+    "cf-typegen": "wrangler types",
+    "generate-task": "gh issue list --state all --json number,title,state,url,body > public/currentIssues.json"
   },
   "dependencies": {
     "@babylonjs/core": "^7.3.1",
