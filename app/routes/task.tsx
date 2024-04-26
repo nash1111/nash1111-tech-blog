@@ -1,4 +1,5 @@
 import { LoaderFunction, json } from "@remix-run/cloudflare";
+import { useLoaderData } from "@remix-run/react";
 
 type Issue = {
     number: number;
@@ -22,31 +23,28 @@ import issues from '../../public/currentIssues.json';
 
 // read data from publid/currentIssues.json
 export const loader: LoaderFunction = async () => {
-    console.log('issues')
-    console.log(issues)
-    const issueLists = json(transformIssueData(issues));
+    //console.log('issues')
+    //console.log(issues)
+    const issueLists = transformIssueData(issues);
     console.log('issueLists')
     console.log(issueLists);
-    return json(issueLists);
+    return issueLists;
 };
 
-export default function Task({ data }: { data: Issue[] }) {
-    console.log('data')
+export default function Task() {
+    console.log('data on page')
+    const data: Issue[] = useLoaderData<Issue[]>();
     console.log(data)
     // dataが空または未定義の場合の処理
     if (!data || data.length === 0) {
-        return <div>No issues found.</div>;
+        return <div>No issues found. a</div>;
     }
 
     return (
         <>
             <div>Task page</div>
             <ul>
-                {data.map(issue => (
-                    <li key={issue.number}>
-                        <a href={issue.url}>{issue.title}</a>
-                    </li>
-                ))}
+                {JSON.stringify(data)}
             </ul>
         </>
     );
