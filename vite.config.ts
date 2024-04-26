@@ -11,12 +11,12 @@ import rehypePrettyCode from "rehype-pretty-code";
 
 export default defineConfig({
   plugins: [
-    remixCloudflareDevProxy(),
+    tsconfigPaths(),
     mdx({
       remarkPlugins: [remarkFrontmatter, remarkMdxFrontmatter],
       rehypePlugins: [rehypePrettyCode],
     }),
+    remixCloudflareDevProxy(),
     remix(),
-    tsconfigPaths(),
   ],
 });
