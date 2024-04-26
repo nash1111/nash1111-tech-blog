@@ -35,18 +35,14 @@ export default function Task({ data }: { data: Issue[] }) {
     console.log(data)
     // dataが空または未定義の場合の処理
     if (!data || data.length === 0) {
-        return <div>No issues found.</div>;
+        return <div>No issues found.{data} a</div>;
     }
 
     return (
         <>
             <div>Task page</div>
             <ul>
-                {data.map(issue => (
-                    <li key={issue.number}>
-                        <a href={issue.url}>{issue.title}</a>
-                    </li>
-                ))}
+                {data[0].title}
             </ul>
         </>
     );
