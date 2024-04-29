@@ -10,13 +10,14 @@ import remarkMdxFrontmatter from "remark-mdx-frontmatter";
 import rehypePrettyCode from "rehype-pretty-code";
 
 export default defineConfig({
-  plugins: [
-    tsconfigPaths(),
-    mdx({
-      remarkPlugins: [remarkFrontmatter, remarkMdxFrontmatter],
-      rehypePlugins: [rehypePrettyCode],
-    }),
-    remixCloudflareDevProxy(),
-    remix(),
-  ],
+  //plugins: [
+  //  tsconfigPaths(),
+  //  //mdx({
+  //  //  remarkPlugins: [remarkFrontmatter, remarkMdxFrontmatter],
+  //  //  rehypePlugins: [rehypePrettyCode],
+  //  //}),
+  //  remixCloudflareDevProxy(),
+  //  remix(),
+  //],
+  plugins: [remixCloudflareDevProxy(), remix(), tsconfigPaths()],
 });

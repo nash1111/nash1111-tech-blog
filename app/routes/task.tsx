@@ -1,6 +1,115 @@
 import { LoaderFunction } from "@remix-run/cloudflare";
 import { useLoaderData } from "@remix-run/react";
-import importedIssues from '../../public/currentIssues.json';
+// import importedIssues from '../../public/currentIssues.json';
+
+const importedIssues = [
+    {
+        "body": "![image](https://github.com/nash1111/nash1111-tech-blog/assets/35922853/cbbf7f7e-5afd-4fa8-b21a-c45012adb1bb)\r\n",
+        "number": 23,
+        "state": "OPEN",
+        "title": "not correct css ?",
+        "url": "https://github.com/nash1111/nash1111-tech-blog/issues/23"
+    },
+    {
+        "body": "",
+        "number": 21,
+        "state": "OPEN",
+        "title": "add issue template",
+        "url": "https://github.com/nash1111/nash1111-tech-blog/issues/21"
+    },
+    {
+        "body": "",
+        "number": 19,
+        "state": "OPEN",
+        "title": "add copy&paste button on code block",
+        "url": "https://github.com/nash1111/nash1111-tech-blog/issues/19"
+    },
+    {
+        "body": "",
+        "number": 18,
+        "state": "OPEN",
+        "title": "add code block highlight",
+        "url": "https://github.com/nash1111/nash1111-tech-blog/issues/18"
+    },
+    {
+        "body": "",
+        "number": 17,
+        "state": "OPEN",
+        "title": "add blog list page",
+        "url": "https://github.com/nash1111/nash1111-tech-blog/issues/17"
+    },
+    {
+        "body": "",
+        "number": 16,
+        "state": "OPEN",
+        "title": "show tasks with datatable",
+        "url": "https://github.com/nash1111/nash1111-tech-blog/issues/16"
+    },
+    {
+        "body": "",
+        "number": 14,
+        "state": "OPEN",
+        "title": "add minimum babylon",
+        "url": "https://github.com/nash1111/nash1111-tech-blog/issues/14"
+    },
+    {
+        "body": "",
+        "number": 12,
+        "state": "CLOSED",
+        "title": "add Header",
+        "url": "https://github.com/nash1111/nash1111-tech-blog/issues/12"
+    },
+    {
+        "body": "",
+        "number": 11,
+        "state": "OPEN",
+        "title": "blog post method",
+        "url": "https://github.com/nash1111/nash1111-tech-blog/issues/11"
+    },
+    {
+        "body": "",
+        "number": 10,
+        "state": "OPEN",
+        "title": "view transition",
+        "url": "https://github.com/nash1111/nash1111-tech-blog/issues/10"
+    },
+    {
+        "body": "",
+        "number": 9,
+        "state": "OPEN",
+        "title": "add babylon wasm",
+        "url": "https://github.com/nash1111/nash1111-tech-blog/issues/9"
+    },
+    {
+        "body": "",
+        "number": 8,
+        "state": "OPEN",
+        "title": "add babylon STL viewer",
+        "url": "https://github.com/nash1111/nash1111-tech-blog/issues/8"
+    },
+    {
+        "body": "",
+        "number": 4,
+        "state": "CLOSED",
+        "title": "use bun",
+        "url": "https://github.com/nash1111/nash1111-tech-blog/issues/4"
+    },
+    {
+        "body": "",
+        "number": 2,
+        "state": "CLOSED",
+        "title": "add how i craeted this blog",
+        "url": "https://github.com/nash1111/nash1111-tech-blog/issues/2"
+    },
+    {
+        "body": "",
+        "number": 1,
+        "state": "CLOSED",
+        "title": "add shadcn ui",
+        "url": "https://github.com/nash1111/nash1111-tech-blog/issues/1"
+    }
+]
+
 import * as React from "react"
 import {
     ColumnDef,
