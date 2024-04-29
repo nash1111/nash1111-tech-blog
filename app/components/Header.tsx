@@ -1,8 +1,7 @@
 import { Button } from "./ui/button";
 import { Link } from "@remix-run/react";
-import React from "react";
 import { cn } from "~/lib/utils";
-import { NavigationMenu, NavigationMenuContent, NavigationMenuItem, NavigationMenuLink, NavigationMenuList, NavigationMenuTrigger, navigationMenuTriggerStyle } from "~/components/ui/navigation-menu"
+import { NavigationMenu, NavigationMenuContent, NavigationMenuItem, NavigationMenuList, NavigationMenuTrigger, navigationMenuTriggerStyle } from "~/components/ui/navigation-menu"
 
 
 export const Header = () => {
