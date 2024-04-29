@@ -16,6 +16,8 @@
     "generate-task": "gh issue list --state all --json number,title,state,url,body > public/currentIssues.json"
   },
   "dependencies": {
+    "@babylonjs/core": "^7.4.0",
+    "@babylonjs/loaders": "^7.4.0",
     "@radix-ui/react-accordion": "^1.1.2",
     "@radix-ui/react-checkbox": "^1.0.4",
     "@radix-ui/react-dropdown-menu": "^2.0.6",
