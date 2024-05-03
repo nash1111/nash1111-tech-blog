@@ -1,15 +1,14 @@
-import { Outlet } from "@remix-run/react";
-
-import * as postFirst from "./blog.first.mdx";
+import { Link, Outlet } from "@remix-run/react";
+import { Button } from "~/components/ui/button";
+import { ChevronLeft } from "lucide-react";
 
 export default function Component() {
-    console.log(postFirst);
     return (
-        <div className="p-10 prose">
+        <div className="p-10 prose md:container mx-auto">
             <Outlet />
-            {JSON.stringify(postFirst)}
-            {postFirst.frontmatter}
-            <postFirst.default />
+            <Link to="/blog" prefetch="intent" unstable_viewTransition>
+                <Button variant="link"><ChevronLeft className="w-4 h-4 mr-2" /> Back to BLOG</Button>
+            </Link>
         </div>
     );
 }
