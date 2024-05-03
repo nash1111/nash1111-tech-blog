@@ -32,7 +32,6 @@
     "autoprefixer": "^10.4.19",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.0",
-    "frontmatter": "^0.0.3",
     "isbot": "^4.1.0",
     "lucide-react": "^0.372.0",
     "miniflare": "^3.20240404.0",
