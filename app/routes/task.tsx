@@ -1,6 +1,7 @@
 import { LoaderFunction } from "@remix-run/cloudflare";
 import { useLoaderData } from "@remix-run/react";
 import importedIssues from '../../public/currentIssues.json';
+import issueJsonCreatedAt from '../../public/lastUpdated.txt';
 
 import * as React from "react"
 import {
@@ -217,7 +218,7 @@ export default function Task() {
 
     return (
         <>
-
+            {JSON.stringify(issueJsonCreatedAt)}
             <div className="w-full">
                 <div className="flex items-center py-4">
                     <DropdownMenu>
