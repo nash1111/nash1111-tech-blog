@@ -25,4 +25,7 @@ export default defineConfig({
     }),
     remix(),
   ],
+  optimizeDeps: {
+    exclude: ["name-of-the-problematic-dependency"],
+  },
 });

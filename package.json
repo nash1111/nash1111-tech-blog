@@ -13,7 +13,7 @@
     "typegen": "wrangler types",
     "preview": "bun run build && wrangler pages dev",
     "cf-typegen": "wrangler types",
-    "generate-task": "gh issue list --state all --json number,title,state,url,body > public/currentIssues.json"
+    "generate-task": "gh issue list --state all --json number,title,state,url,body > public/currentIssues.json && echo 'export const lastUpdated = \"'`date '+%Y-%m-%dT%H:%M:%S'`'\";' > public/lastUpdated.ts"
   },
   "dependencies": {
     "@babylonjs/core": "^7.4.0",

@@ -35,10 +35,12 @@ export const Header = () => {
                         <NavigationMenuItem>
                             <NavigationMenuTrigger>Others</NavigationMenuTrigger>
                             <NavigationMenuContent>
-                                <ul className="flex flex-col gap-3 p-4 overflow-x-auto">
+                                <ul className="flex flex-col gap-3 p-2 overflow-x-auto">
                                     {components.map((component) => (
                                         <div className="break-words" key={component.id}>
-                                            {component.title}
+                                            <Link to={component.href} prefetch="intent" unstable_viewTransition className="max-w-xs" >
+                                                <Button variant="default" size="sm">{component.title}</Button>
+                                            </Link>
                                         </div>
                                     ))}
                                 </ul>
@@ -53,7 +55,7 @@ export const Header = () => {
     );
 };
 
-const components: { id: number, title: string; href: string; description: string, closed: boolean }[] = [
+const components: { id: number, title: string; href: string }[] = [
     {
         id: 1,
         title: "Tasks",
