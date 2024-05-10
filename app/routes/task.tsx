@@ -1,7 +1,7 @@
 import { LoaderFunction } from "@remix-run/cloudflare";
 import { useLoaderData } from "@remix-run/react";
 import importedIssues from '../../public/currentIssues.json';
-import issueJsonCreatedAt from '../../public/lastUpdated.txt';
+import { lastUpdated } from '../../public/lastUpdated.ts';
 
 import * as React from "react"
 import {
@@ -184,7 +184,16 @@ export const loader: LoaderFunction = async () => {
     return issueLists;
 };
 
+const options = {
+    weekday: 'long',
+    year: 'numeric',
+    month: 'long',
+    day: 'numeric',
+};
+
+
 export default function Task() {
+    const issueJsonCreatedAt = new Date(lastUpdated).toLocaleDateString("en-US", options);
     const issueData: Issue[] = useLoaderData<Issue[]>();
 
     const [sorting, setSorting] = React.useState<SortingState>([])
@@ -218,7 +227,7 @@ export default function Task() {
 
     return (
         <>
-            {JSON.stringify(issueJsonCreatedAt)}
+            lastUpdated: {issueJsonCreatedAt}
             <div className="w-full">
                 <div className="flex items-center py-4">
                     <DropdownMenu>
