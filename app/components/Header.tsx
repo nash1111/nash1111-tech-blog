@@ -13,16 +13,6 @@ export const Header = () => {
                 </Link>
             </div>
             <div className="flex gap-4">
-
-
-                {
-                    //                <Link to="https://nash1111-old-blog.pages.dev/">
-                    //                    <Button variant="default">old blog</Button>
-                    //                </Link>
-                    //<Link to="/task" prefetch="intent" unstable_viewTransition>
-                    //    <Button variant="default">task</Button>
-                    //</Link>
-                }
                 <Link to="/blog" prefetch="intent" unstable_viewTransition>
                     <Button variant="default">Blog</Button>
                 </Link>
