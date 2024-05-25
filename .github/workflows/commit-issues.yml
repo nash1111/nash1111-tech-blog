@@ -11,7 +11,7 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
-  generate-endpoints-json:
+  generate-issue-json:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -23,6 +23,5 @@ jobs:
           git config user.name github-actions[bot]
           git config user.email github-actions[bot]@users.noreply.github.com
           git add .
-          git commit -m 'chore: update .endpoints.json'
-          git push
-        if: steps.diff.outcome == 'failure'
+          git commit -m 'chore: update currentIssues.json lastUpdated.ts' --allow-empty
+          git push --verbose
