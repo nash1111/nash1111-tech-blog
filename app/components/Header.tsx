@@ -54,6 +54,11 @@ const components: { id: number, title: string; href: string }[] = [
     {
         id: 2,
         title: "Snippets",
-        href: "/docs/primitives/hover-card",
+        href: "/snippets",
     },
+    {
+        id:3,
+        title: "Old Blog",
+        href: "https://nash1111-old-blog.pages.dev/"
+    }
 ]
