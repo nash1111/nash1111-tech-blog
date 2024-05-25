@@ -1,49 +1,17 @@
 ---
-title: First post
-description: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-published: 2023-02-15
+title: 個人ブログをNextからRemixに移行しました
+description: 
+published: 2024-05-25
 ---
+import { NavigationButton } from "../components/NavigationButton"
 
-# {frontmatter.title}
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-## hoge
-# fuga
+## {frontmatter.title}
+旧ブログは[こちら](https://nash1111-old-blog.pages.dev)
 
-## aaa
-```
-code hoge
-```
-
-kieeeeeeeeeeeeeeeee
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaa  
-aaabbbbbbbbbbbbbbbbbbbbb
-kieeeeeeeeeeeeeeeee
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaa  
-aaabbbbbbbbbbbbbbbbbbbbb
-kieeeeeeeeeeeeeeeee
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaa  
-aaabbbbbbbbbbbbbbbbbbbbb
-kieeeeeeeeeeeeeeeee
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaa  
-aaabbbbbbbbbbbbbbbbbbbbb
-kieeeeeeeeeeeeeeeee
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaa  
-aaabbbbbbbbbbbbbbbbbbbbb
-kieeeeeeeeeeeeeeeee
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaa  
-aaabbbbbbbbbbbbbbbbbbbbb
-kieeeeeeeeeeeeeeeee
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaa  
-aaabbbbbbbbbbbbbbbbbbbbb
-kieeeeeeeeeeeeeeeee
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaa  
-aaabbbbbbbbbbbbbbbbbbbbb
-kieeeeeeeeeeeeeeeee
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaa  
-aaabbbbbbbbbbbbbbbbbbbbb
-kieeeeeeeeeeeeeeeee
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaa  
-aaabbbbbbbbbbbbbbbbbbbbb
+## 作り方
+- [create remixコマンド](https://remix.run/docs/en/main/other-api/create-remix)で作成  
+- [bun](https://bun.sh/docs/installation)のインストール
+- [mdx](https://remix.run/docs/en/main/guides/mdx)の設定
+- [shadcnui](https://ui.shadcn.com/docs/installation/remix)の導入  
+ブログに関するタスク管理はこのページでやっています。  
+<NavigationButton path="/task" label="tasks"/>
