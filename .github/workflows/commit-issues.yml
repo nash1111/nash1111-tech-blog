@@ -25,3 +25,5 @@ jobs:
           git add .
           git commit -m 'chore: update currentIssues.json lastUpdated.ts' --allow-empty
           git push --verbose
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
