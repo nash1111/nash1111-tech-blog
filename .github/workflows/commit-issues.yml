@@ -34,4 +34,4 @@ jobs:
           git commit -m 'chore: update currentIssues.json lastUpdated.ts' --allow-empty
           git push origin ${{ env.branch }}
         env:
-          GITHUB_TOKEN: ${{ secrets.BLOG_TOKEN }}
+          GH_TOKEN: ${{ secrets.BLOG_TOKEN }}
