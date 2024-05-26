@@ -21,6 +21,8 @@ jobs:
         run: echo "::set-output name=branch::$(echo ${GITHUB_REF#refs/heads/})"
         env:
           GITHUB_REF: ${{ github.ref }}
+      - name: Checkout to branch
+        run: git checkout ${{ steps.extract_branch.outputs.branch }}
       - name: Commit & Push
         run: |
           set -x
