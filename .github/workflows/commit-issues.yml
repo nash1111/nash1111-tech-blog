@@ -23,7 +23,9 @@ jobs:
         run: |
           echo "branch=${{ github.head_ref }}" >> $GITHUB_ENV
       - name: Checkout to branch
-        run: git checkout ${{ env.branch }}
+        run: |
+          git checkout ${{ env.branch }}
+          git config --global url."https://${{ secrets.BLOG_TOKEN }}:x-oauth-basic@github.com/".insteadOf "ssh://git@github.com/"
       - name: Commit & Push
         run: |
           set -x
