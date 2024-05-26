@@ -18,11 +18,10 @@ jobs:
       - uses: oven-sh/setup-bun@v1
       - name: Extract branch name
         id: extract_branch
-        run: echo "::set-output name=branch::$(echo ${GITHUB_REF#refs/heads/})"
-        env:
-          GITHUB_REF: ${{ github.ref }}
+        run: |
+          echo "branch=${{ github.head_ref }}" >> $GITHUB_ENV
       - name: Checkout to branch
-        run: git checkout ${{ steps.extract_branch.outputs.branch }}
+        run: git checkout ${{ env.branch }}
       - name: Commit & Push
         run: |
           set -x
@@ -31,6 +30,6 @@ jobs:
           git config user.email github-actions[bot]@users.noreply.github.com
           git add .
           git commit -m 'chore: update currentIssues.json lastUpdated.ts' --allow-empty
-          git push --verbose
+          git push origin ${{ env.branch }}
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
