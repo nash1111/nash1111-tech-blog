@@ -26,6 +26,12 @@ jobs:
         run: |
           git checkout ${{ env.branch }}
           git config --global url."https://${{ secrets.BLOG_TOKEN }}:x-oauth-basic@github.com/".insteadOf "ssh://git@github.com/"
+      - name: Check diff
+        id: diff
+        run: |
+          git add -N .
+          git diff --name-only --exit-code public/lastUpdated.ts public/currentIssues.json
+        continue-on-error: true
       - name: Commit & Push
         run: |
           set -x
