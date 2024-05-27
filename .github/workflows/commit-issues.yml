@@ -35,9 +35,11 @@ jobs:
       - name: Commit & Push
         run: |
           set -x
-          bun run generate-task
+          gh issue list --state all --json number,title,state,url,body > public/currentIssues.json && echo 'export const lastUpdated = \"'`date '+%Y-%m-%dT%H:%M:%S'`'\";' > public/lastUpdated.ts
           git config user.name github-actions[bot]
           git config user.email github-actions[bot]@users.noreply.github.com
           git add .
           git commit -m 'chore: update currentIssues.json lastUpdated.ts' --allow-empty
           git push origin ${{ env.branch }}
+        env:
+          GH_TOKEN: ${{ secrets.BLOG_TOKEN }}
