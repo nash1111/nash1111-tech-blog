@@ -25,7 +25,7 @@ jobs:
       - name: Checkout to branch
         run: |
           git checkout ${{ env.branch }}
-          git config --global url."https://${{ secrets.BLOG_TOKEN }}:x-oauth-basic@github.com/".insteadOf "ssh://git@github.com/"
+          git config --global url."https://${{ secrets.BLOG_TOKEN }}:x-oauth-basic@github.com/".insteadOf "https://github.com/"
       - name: Check diff
         id: diff
         run: |
