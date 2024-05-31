@@ -258,19 +258,20 @@ export default function Task() {
                     </DropdownMenu>
                 </div>
                 <div className="rounded-md border">
-                    <Table>
+                    <Table className="table-fixed">
                         <TableHeader>
                             {table.getHeaderGroups().map((headerGroup) => (
                                 <TableRow key={headerGroup.id}>
                                     {headerGroup.headers.map((header) => {
                                         return (
-                                            <TableHead key={header.id}>
+                                            <TableHead key={header.id} className={header.id === "select" ? "w-8" : header.id !== "body" ? "w-40" : "w-full"}>
                                                 {header.isPlaceholder
                                                     ? null
                                                     : flexRender(
                                                         header.column.columnDef.header,
                                                         header.getContext()
-                                                    )}
+                                                    )
+                                                }
                                             </TableHead>
                                         )
                                     })}
