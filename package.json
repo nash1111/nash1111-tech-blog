@@ -16,7 +16,7 @@
     "generate-task": "gh issue list --state all --json number,title,state,url,body > public/currentIssues.json && echo 'export const lastUpdated = \"'`date '+%Y-%m-%dT%H:%M:%S'`'\";' > public/lastUpdated.ts"
   },
   "dependencies": {
-    "@babylonjs/core": "^7.4.0",
+    "@babylonjs/core": "^7.9.0",
     "@babylonjs/loaders": "^7.4.0",
     "@mdx-js/rollup": "^3.0.1",
     "@radix-ui/react-accordion": "^1.1.2",
