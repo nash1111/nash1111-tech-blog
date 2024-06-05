@@ -55,6 +55,7 @@ jobs:
             git config user.email github-actions[bot]@users.noreply.github.com
             git add .
             git commit -m 'chore: update test-results' --allow-empty
+            git config pull.rebase false
             git pull origin ${{ env.branch }}
             git push origin ${{ env.branch }}
           env:
