@@ -40,6 +40,8 @@ jobs:
           git config user.email github-actions[bot]@users.noreply.github.com
           git add .
           git commit -m 'chore: update currentIssues.json lastUpdated.ts' --allow-empty
+          git config pull.rebase false
+          git pull origin ${{ env.branch }}
           git push origin ${{ env.branch }}
         env:
           GH_TOKEN: ${{ secrets.BLOG_TOKEN }}

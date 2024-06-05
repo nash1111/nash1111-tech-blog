@@ -1,0 +1,62 @@
+name: Update test-results
+
+on:
+  pull_request:
+    branches: [master]
+  workflow_dispatch:
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  update-test-results:
+    runs-on: ubuntu-latest
+    steps:
+        - uses: actions/checkout@v4
+          with:
+            fetch-depth: 0
+        - uses: oven-sh/setup-bun@v1
+        - name: Extract branch name
+          id: extract_branch
+          run: |
+            echo "branch=${{ github.head_ref }}" >> $GITHUB_ENV
+        - name: Checkout to branch
+          run: |
+            git checkout ${{ env.branch }}
+            git config --global url."https://${{ secrets.BLOG_TOKEN }}:x-oauth-basic@github.com/".insteadOf "https://github.com/"
+        - name: Install dependencies
+          run: bun install
+
+        - name: Start server
+          run: |
+            bun run dev &
+            echo $! > server.pid
+    
+        - name: Wait for server to start
+          run: sleep 10
+    
+        - name: Run Playwright tests
+          run: bunx playwright install --with-deps && bunx playwright test
+    
+        - name: Stop server
+          run: kill $(cat server.pid)
+
+        - name: Check diff
+          id: diff
+          run: |
+            git add -N .
+            git diff --name-only --exit-code test-results/
+          continue-on-error: true
+        - name: Commit & Push
+          run: |
+            set -x
+            git config user.name github-actions[bot]
+            git config user.email github-actions[bot]@users.noreply.github.com
+            git add .
+            git commit -m 'chore: update test-results' --allow-empty
+            git config pull.rebase false
+            git pull origin ${{ env.branch }}
+            git push origin ${{ env.branch }}
+          env:
+            GH_TOKEN: ${{ secrets.BLOG_TOKEN }}
