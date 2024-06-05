@@ -37,7 +37,7 @@ jobs:
           run: sleep 10
     
         - name: Run Playwright tests
-          run: bunx playwright test
+          run: bunx playwright install --with-deps && bunx playwright test
     
         - name: Stop server
           run: kill $(cat server.pid)
