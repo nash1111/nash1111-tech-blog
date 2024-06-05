@@ -34,6 +34,7 @@ jobs:
       - name: Commit & Push
         run: |
           set -x
+          bun install
           bun run dev
           bunx playwright test
           git config user.name github-actions[bot]
