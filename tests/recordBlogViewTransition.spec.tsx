@@ -8,6 +8,8 @@ test.describe('/task page', () => {
         await page.getByText('個人ブログをNextからRemixに移行しました').click();
         // TODO: avoid waitForTimeout
         await page.waitForTimeout(1000);
+        await page.close();
+        await page.video()?.saveAs(`test-results/videos/video-${Date.now()}.webm`);
     });
 });
 
