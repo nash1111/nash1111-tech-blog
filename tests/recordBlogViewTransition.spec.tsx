@@ -9,7 +9,8 @@ test.describe('/task page', () => {
         // TODO: avoid waitForTimeout
         await page.waitForTimeout(1000);
         await page.close();
-        await page.video()?.saveAs(`test-results/videos/video-${Date.now()}.webm`);
+        await page.video()?.saveAs(`test-results/videos/blogPage.webm`);
+        // 職人芸でwebm->gifに変換
     });
 });
 
