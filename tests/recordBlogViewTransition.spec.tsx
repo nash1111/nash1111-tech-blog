@@ -1,7 +1,11 @@
 import { test } from '@playwright/test';
 
-test.use({ video: 'on' });
-
+test.use({
+    video: {
+        mode: 'on',
+        saveOnFailure: false // デフォルトのビデオ保存を無効にする
+    }
+});
 test.describe('/task page', () => {
     test('should render without crashing', async ({ page }) => {
         await page.goto('http://localhost:5173/blog');
@@ -10,7 +14,7 @@ test.describe('/task page', () => {
         await page.waitForTimeout(1000);
         await page.close();
         await page.video()?.saveAs(`test-results/videos/blogPage.webm`);
-        // 職人芸でwebm->gifに変換
+        // webm->gif
     });
 });
 
