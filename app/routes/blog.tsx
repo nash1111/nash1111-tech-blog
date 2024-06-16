@@ -1,10 +1,16 @@
-import { Link, Outlet, useLocation } from "@remix-run/react";
+import { Link, Outlet, useLoaderData, useLocation } from "@remix-run/react";
 import { Button } from "~/components/ui/button";
 import { ChevronLeft, Twitter } from "lucide-react";
+import { json, LoaderFunction } from "@remix-run/node";
+
+export const loader: LoaderFunction = async ({ request }) => {
+    const url = new URL(request.url);
+    const tweetUrl = `https://twitter.com/intent/tweet?url=${encodeURIComponent(url.href)}`;
+    return json({ tweetUrl });
+};
 
 export default function Component() {
-    const location = useLocation();
-    const tweetUrl = `https://twitter.com/intent/tweet?url=${encodeURIComponent(`https://yourdomain.com${location.pathname}`)}`;
+    const { tweetUrl } = useLoaderData();
 
     return (
         <div className="p-10 prose md:container mx-auto">
