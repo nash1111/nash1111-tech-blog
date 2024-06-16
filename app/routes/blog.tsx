@@ -1,6 +1,6 @@
-import { Link, Outlet, useLoaderData, useLocation } from "@remix-run/react";
+import { Link, Outlet, useLoaderData } from "@remix-run/react";
 import { Button } from "~/components/ui/button";
-import { ChevronLeft, Twitter } from "lucide-react";
+import { ChevronLeft, X } from "lucide-react";
 import { json, LoaderFunction } from "@remix-run/node";
 
 export const loader: LoaderFunction = async ({ request }) => {
@@ -10,7 +10,7 @@ export const loader: LoaderFunction = async ({ request }) => {
 };
 
 export default function Component() {
-    const { tweetUrl } = useLoaderData();
+    const { tweetUrl } = useLoaderData<{ tweetUrl: string }>();
 
     return (
         <div className="p-10 prose md:container mx-auto">
@@ -20,7 +20,7 @@ export default function Component() {
                     <Button variant="link"><ChevronLeft className="w-4 h-4 mr-2" />Back to BLOG</Button>
                 </Link>
                 <a href={tweetUrl} target="_blank" rel="noopener noreferrer">
-                    <Button variant="primary"><Twitter className="w-4 h-4 mr-2" />Tweet</Button>
+                    <Button variant="link"><X className="w-4 h-4 mr-2" />Post on X</Button>
                 </a>
             </div>
         </div>
