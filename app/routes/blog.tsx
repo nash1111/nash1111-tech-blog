@@ -1,7 +1,7 @@
 import { Link, Outlet, useLoaderData } from "@remix-run/react";
 import { Button } from "~/components/ui/button";
 import { ChevronLeft, X } from "lucide-react";
-import { json, LoaderFunction } from "@remix-run/node";
+import { json, LoaderFunction } from "@remix-run/cloudflare";
 
 export const loader: LoaderFunction = async ({ request }) => {
     const url = new URL(request.url);
