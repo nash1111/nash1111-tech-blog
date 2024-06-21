@@ -15,7 +15,6 @@ export const meta: MetaFunction = () => {
 export default function Index() {
   return (
     <div style={{ fontFamily: "system-ui, sans-serif", lineHeight: "1.8" }}>
-      <h1>Welcome to my blog</h1>
       <Link to="/blog" prefetch="intent" unstable_viewTransition>
         <Button variant="default">Blog</Button>
       </Link>
