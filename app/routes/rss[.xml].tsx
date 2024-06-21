@@ -1,6 +1,7 @@
 import { json, LoaderFunction } from '@remix-run/cloudflare';
 import { promises as fs } from 'fs';
 import path from 'path';
+import fm from 'front-matter';
 
 export const loader: LoaderFunction = async () => {
     // TODO: gather paths automatically
@@ -15,9 +16,13 @@ export const loader: LoaderFunction = async () => {
         )
     );
 
+    const result = await fs.readFile('app/routes/blog.nexttoremix.mdx', 'utf8');
+    const content = fm(result);
+    console.log(content);
+
     const escapeXML = (str: string) => str.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;').replace(/'/g, '&apos;');
 
-    // Convert fileContents to XML format
+    console.log(fileContents)
     const xmlContent = `<rss version="2.0">
         <channel>
             <title>Your Blog Title</title>
