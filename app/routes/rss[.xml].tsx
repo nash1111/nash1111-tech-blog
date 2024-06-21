@@ -1,6 +1,6 @@
 import { json, LoaderFunction } from '@remix-run/cloudflare';
-import { promises as fs } from 'fs';
-import path from 'path';
+import { promises as fs } from 'node:fs';
+import path from 'node:path';
 import fm from 'front-matter';
 
 export const loader: LoaderFunction = async () => {
