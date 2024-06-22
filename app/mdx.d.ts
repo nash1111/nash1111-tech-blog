@@ -3,6 +3,8 @@ declare module "*.mdx" {
     title: string;
     description: string;
     published: string;
+    thumbnail?: string;
+    tags?: string[];
   };
 
   export default function (props: Record<string, never>): JSX.Element;
