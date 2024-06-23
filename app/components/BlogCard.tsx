@@ -10,10 +10,10 @@ interface BlogCardProps {
 export function BlogCard({ path, frontmatter }: BlogCardProps) {
     return (
         <div className="mb-6">
-            <Card className="w-[350px] overflow-hidden border border-gray-200">
+            <Card className="w-[320px] overflow-hidden border border-gray-200">
                 <Link to={path} prefetch="intent" unstable_viewTransition>
                     <div
-                        className="h-[175px] bg-cover bg-center"
+                        className="h-[160px] bg-cover bg-center"
                         style={{ backgroundImage: `url(${frontmatter.thumbnail})` }}
                     ></div>
                 </Link>
