@@ -6,7 +6,7 @@ export const meta: MetaFunction = () => {
   return [
     { title: "nash1111 techblog" },
     {
-      name: "description",
+      name: "my techblog",
       content: "nash1111 techblog with Remix and Vite on Cloudflare Pages.",
     },
   ];
