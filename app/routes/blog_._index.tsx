@@ -37,7 +37,7 @@ export default function BlogListComponent() {
         <div className="p-10 prose">
             {posts.map(post => (
                 <div key={post.path}>
-                    <Card className={`${post.data.frontmatter.thumbnail ? `bg-[url('${post.data.frontmatter.thumbnail}')] bg-cover w-[350px]` : 'bg-gray-200'}`}>
+                    <Card className="bg-cover w-[350px]" style={{ backgroundImage: `url(${post.data.frontmatter.thumbnail})` }}>
                         <CardHeader>
                             <CardTitle>
                                 <Link to={post.path} prefetch="intent" unstable_viewTransition>
