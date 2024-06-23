@@ -8,3 +8,7 @@ export const posts = [
   { path: "/blog/whaticareabout", data: postWhatICareAbout },
   { path: "/blog/pragent", data: postPrAgent },
 ];
+export function getPostDataByPath(path: string) {
+  const post = posts.find((post) => post.path === path);
+  return post ? post.data : null;
+}
