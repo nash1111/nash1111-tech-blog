@@ -42,7 +42,7 @@ jobs:
           OPENAI_KEY: ${{ secrets.OPENAI_KEY }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 ```
-
+以上の設定をした段階で、デフォルトブランチにマージされてからPRがopen, reopen, ready_for_reviewのどれかになると、PR Agentが自動でレビューを行います。  
 ### デフォルト設定で何をやってくれるか
 [PR#77](https://github.com/nash1111/nash1111-tech-blog/pull/77)にて、デフォルト設定で何が起きたかを確認しました。  
 - PRの説明の自動生成
