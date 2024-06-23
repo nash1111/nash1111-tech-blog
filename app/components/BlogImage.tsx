@@ -7,7 +7,7 @@ interface BlogImageProps {
     height?: string;
 }
 
-const BlogImage: React.FC<BlogImageProps> = ({ imagePath, altText = 'Blog Image', width, height }) => {
+const BlogImage: React.FC<BlogImageProps> = ({ imagePath, altText = 'Blog Image', width = '100%', height = '100%' }) => {
     return (
         <div className="blog-image-container" style={{ width, height }}>
             <img src={imagePath} alt={altText} className="blog-image" style={{ width: '100%', height: '100%' }} />
