@@ -14,11 +14,12 @@ export const loader: LoaderFunction = async ({ request }) => {
     const thumbnail = post?.frontmatter?.thumbnail || "/public/default_ogp.png";
     const title = post?.frontmatter?.title || "Untitled";
     const description = post?.frontmatter?.description || "No description";
-    return json({ tweetUrl, thumbnail, title, description });
+    const thumbnailUrl = url.href + "/public/" + (post?.frontmatter?.thumbnail || "default_ogp.png");
+    return json({ tweetUrl, thumbnail, title, description, thumbnailUrl });
 };
 
 export default function Component() {
-    const { tweetUrl, thumbnail, title, description } = useLoaderData<{ tweetUrl: string, thumbnail: string, title: string, description: string }>();
+    const { tweetUrl, thumbnail, title, description, thumbnailUrl } = useLoaderData<{ tweetUrl: string, thumbnail: string, title: string, description: string, thumbnailUrl: string }>();
     console.log("thumnbnail");
     return (
         <div className="p-10 prose md:container mx-auto">
@@ -27,9 +28,7 @@ export default function Component() {
                 <meta property="og:description" content={description} />
                 <meta property="og:image" content={thumbnail} />
                 <meta property="og:type" content="article" />
-                {
-                    // <meta property="og:url" content={window.location.href} />
-                }
+                <meta property="og:url" content={thumbnailUrl} />
             </head>
             <Outlet />
             <div className="flex justify-between items-center">
