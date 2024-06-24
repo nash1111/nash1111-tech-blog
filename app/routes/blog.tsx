@@ -14,7 +14,7 @@ export const loader: LoaderFunction = async ({ request }) => {
     const thumbnail = post?.frontmatter?.thumbnail || "/public/default_ogp.png";
     const title = post?.frontmatter?.title || "Untitled";
     const description = post?.frontmatter?.description || "No description";
-    const thumbnailUrl = url.href + "/public/" + (post?.frontmatter?.thumbnail || "default_ogp.png");
+    const thumbnailUrl = url.href + "public/" + (post?.frontmatter?.thumbnail || "default_ogp.png");
     return json({ tweetUrl, thumbnail, title, description, thumbnailUrl });
 };
 
@@ -29,6 +29,7 @@ export default function Component() {
                 <meta property="og:image" content={thumbnail} />
                 <meta property="og:type" content="article" />
                 <meta property="og:url" content={thumbnailUrl} />
+                <meta property="og:site_name" content="nash1111 techblog" />
             </head>
             <Outlet />
             <div className="flex justify-between items-center">
