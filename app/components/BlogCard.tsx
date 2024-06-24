@@ -9,7 +9,7 @@ interface BlogCardProps {
 
 export function BlogCard({ path, frontmatter }: BlogCardProps) {
     return (
-        <div className="mb-6">
+        <div>
             <Card className="w-[320px] overflow-hidden border border-gray-200">
                 <Link to={path} prefetch="intent" unstable_viewTransition>
                     <div

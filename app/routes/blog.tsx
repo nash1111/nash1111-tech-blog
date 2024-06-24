@@ -3,6 +3,7 @@ import { Button } from "~/components/ui/button";
 import { ChevronLeft, X } from "lucide-react";
 import { json, LoaderFunction } from "@remix-run/cloudflare";
 import { getPostDataByPath } from "~/lib/posts";
+import { BlogThumbnail } from "~/components/BlogThumbnail"
 
 export const loader: LoaderFunction = async ({ request }) => {
     const url = new URL(request.url);
@@ -18,7 +19,6 @@ export const loader: LoaderFunction = async ({ request }) => {
 
 export default function Component() {
     const { tweetUrl, thumbnail, title, description, thumbnailUrl } = useLoaderData<{ tweetUrl: string, thumbnail: string, title: string, description: string, thumbnailUrl: string }>();
-    console.log("thumnbnail");
     return (
         <div className="p-10 prose md:container mx-auto">
             <head>
@@ -29,6 +29,8 @@ export default function Component() {
                 <meta property="og:url" content={thumbnailUrl} />
                 <meta property="og:site_name" content="nash1111 techblog" />
             </head>
+            <h2>{title}</h2>
+            <BlogThumbnail imagePath={thumbnail} height="320px" />
             <Outlet />
             <div className="flex justify-between items-center">
                 <Link to="/blog" prefetch="intent" unstable_viewTransition>
