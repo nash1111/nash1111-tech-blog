@@ -3,6 +3,7 @@ import { Button } from "~/components/ui/button";
 import { ChevronLeft, X } from "lucide-react";
 import { json, LoaderFunction } from "@remix-run/cloudflare";
 import { getPostDataByPath, posts } from "~/lib/posts";
+import { Frontmatter } from "~/mdx";
 
 export const loader: LoaderFunction = async ({ request }) => {
     const url = new URL(request.url);
@@ -10,22 +11,18 @@ export const loader: LoaderFunction = async ({ request }) => {
     const path = url.pathname;
     console.log(path);
     const post = getPostDataByPath(path);
-    const thumbnail = post?.frontmatter?.thumbnail || "/public/default_ogp.png";
-    console.log("thumbnail");
-    console.log(thumbnail);
-    return json({ tweetUrl, thumbnail });
+    return json({ tweetUrl, post });
 };
 
 export default function Component() {
-    const { tweetUrl, thumbnail } = useLoaderData<{ tweetUrl: string, thumbnail: string }>();
+    const { tweetUrl, post } = useLoaderData<{ tweetUrl: string, post: Frontmatter }>();
     console.log("thumnbnail");
-    console.log(thumbnail)
     return (
         <div className="p-10 prose md:container mx-auto">
             <head>
                 <meta property="og:title" content="Your Blog Title" />
                 <meta property="og:description" content="Your Blog Description" />
-                <meta property="og:image" content={thumbnail} />
+                <meta property="og:image" content={post.thumbnail} />
                 <meta property="og:type" content="article" />
                 {
                     // <meta property="og:url" content={window.location.href} />
