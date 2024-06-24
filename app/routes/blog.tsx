@@ -7,7 +7,6 @@ import { Frontmatter } from "~/mdx";
 
 export const loader: LoaderFunction = async ({ request }) => {
     const url = new URL(request.url);
-    const tweetUrl = `https://twitter.com/intent/tweet?url=${encodeURIComponent(url.href)}`;
     const path = url.pathname;
     console.log(path);
     const post = getPostDataByPath(path);
@@ -15,6 +14,7 @@ export const loader: LoaderFunction = async ({ request }) => {
     const title = post?.frontmatter?.title || "Untitled";
     const description = post?.frontmatter?.description || "No description";
     const thumbnailUrl = url.origin + (post?.frontmatter?.thumbnail || "default_ogp.png");
+    const tweetUrl = `https://twitter.com/intent/tweet?url=${encodeURIComponent(url.href)}&text=${encodeURIComponent(title)}&via=nash1111_rgba`;
     return json({ tweetUrl, thumbnail, title, description, thumbnailUrl });
 };
 
