@@ -2,18 +2,35 @@ import { Link, Outlet, useLoaderData } from "@remix-run/react";
 import { Button } from "~/components/ui/button";
 import { ChevronLeft, X } from "lucide-react";
 import { json, LoaderFunction } from "@remix-run/cloudflare";
+import { getPostDataByPath, posts } from "~/lib/posts";
+import { Frontmatter } from "~/mdx";
 
 export const loader: LoaderFunction = async ({ request }) => {
     const url = new URL(request.url);
     const tweetUrl = `https://twitter.com/intent/tweet?url=${encodeURIComponent(url.href)}`;
-    return json({ tweetUrl });
+    const path = url.pathname;
+    console.log(path);
+    const post = getPostDataByPath(path);
+    const thumbnail = post?.frontmatter?.thumbnail || "/default_ogp.png";
+    const title = post?.frontmatter?.title || "Untitled";
+    const description = post?.frontmatter?.description || "No description";
+    const thumbnailUrl = url.origin + (post?.frontmatter?.thumbnail || "default_ogp.png");
+    return json({ tweetUrl, thumbnail, title, description, thumbnailUrl });
 };
 
 export default function Component() {
-    const { tweetUrl } = useLoaderData<{ tweetUrl: string }>();
-
+    const { tweetUrl, thumbnail, title, description, thumbnailUrl } = useLoaderData<{ tweetUrl: string, thumbnail: string, title: string, description: string, thumbnailUrl: string }>();
+    console.log("thumnbnail");
     return (
         <div className="p-10 prose md:container mx-auto">
+            <head>
+                <meta property="og:title" content={title} />
+                <meta property="og:description" content={description} />
+                <meta property="og:image" content={thumbnail} />
+                <meta property="og:type" content="article" />
+                <meta property="og:url" content={thumbnailUrl} />
+                <meta property="og:site_name" content="nash1111 techblog" />
+            </head>
             <Outlet />
             <div className="flex justify-between items-center">
                 <Link to="/blog" prefetch="intent" unstable_viewTransition>

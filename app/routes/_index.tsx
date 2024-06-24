@@ -9,6 +9,18 @@ export const meta: MetaFunction = () => {
       name: "description",
       content: "nash1111 techblog with Remix and Vite on Cloudflare Pages.",
     },
+    {
+      name: "keywords",
+      content: "techblog, Web, Backend, Frontend, Remix, Rust, axum, wasm, wgpu, WebGL, WebGL2, THREE, TypeScript, Deno, WebGPU"
+    },
+    {
+      name: "author",
+      content: "nash1111"
+    },
+    {
+      name: "robots",
+      content: "index, follow"
+    }
   ];
 };
 
