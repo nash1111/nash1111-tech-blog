@@ -2,13 +2,11 @@ import { Link, Outlet, useLoaderData } from "@remix-run/react";
 import { Button } from "~/components/ui/button";
 import { ChevronLeft, X } from "lucide-react";
 import { json, LoaderFunction } from "@remix-run/cloudflare";
-import { getPostDataByPath, posts } from "~/lib/posts";
-import { Frontmatter } from "~/mdx";
+import { getPostDataByPath } from "~/lib/posts";
 
 export const loader: LoaderFunction = async ({ request }) => {
     const url = new URL(request.url);
     const path = url.pathname;
-    console.log(path);
     const post = getPostDataByPath(path);
     const thumbnail = post?.frontmatter?.thumbnail || "/default_ogp.png";
     const title = post?.frontmatter?.title || "Untitled";
