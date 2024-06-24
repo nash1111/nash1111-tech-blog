@@ -11,18 +11,21 @@ export const loader: LoaderFunction = async ({ request }) => {
     const path = url.pathname;
     console.log(path);
     const post = getPostDataByPath(path);
-    return json({ tweetUrl, post });
+    const thumbnail = post?.frontmatter?.thumbnail || "/public/default_ogp.png";
+    console.log("thumbnail");
+    console.log(thumbnail);
+    return json({ tweetUrl, thumbnail });
 };
 
 export default function Component() {
-    const { tweetUrl, post } = useLoaderData<{ tweetUrl: string, post: Frontmatter }>();
+    const { tweetUrl, thumbnail } = useLoaderData<{ tweetUrl: string, thumbnail: string }>();
     console.log("thumnbnail");
     return (
         <div className="p-10 prose md:container mx-auto">
             <head>
                 <meta property="og:title" content="Your Blog Title" />
                 <meta property="og:description" content="Your Blog Description" />
-                <meta property="og:image" content={post.thumbnail} />
+                <meta property="og:image" content={thumbnail} />
                 <meta property="og:type" content="article" />
                 {
                     // <meta property="og:url" content={window.location.href} />
