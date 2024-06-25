@@ -1,5 +1,7 @@
 # Tech Blog with Remix, Bun and Cloudflare
 
+[Visit My Blog](https://nash1111rgba.com/blog)
+
 ## Automated Testing and Screenshots
 
 I use Playwright for end-to-end testing and automated screenshot generation.
