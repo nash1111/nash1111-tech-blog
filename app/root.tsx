@@ -37,7 +37,7 @@ export default function App() {
   return (
     <div className="flex flex-col min-h-screen">
       <Header />
-      <div className="flex-grow">
+      <div className="flex-grow bg-gradient-to-r from-blue-100 to-blue-200">
         <Outlet />
       </div>
       <Footer />
