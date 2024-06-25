@@ -1,7 +1,6 @@
 import { Link } from "@remix-run/react";
 import { Card, CardContent, CardTitle } from "~/components/ui/card";
 import { Frontmatter } from "~/mdx";
-import { Separator } from "~/components/ui/separator"
 
 interface BlogCardProps {
     path: string;
