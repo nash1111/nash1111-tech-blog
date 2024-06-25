@@ -1,6 +1,7 @@
 import { Link } from "@remix-run/react";
 import { Card, CardContent, CardTitle } from "~/components/ui/card";
 import { Frontmatter } from "~/mdx";
+import { Separator } from "~/components/ui/separator"
 
 interface BlogCardProps {
     path: string;
@@ -10,14 +11,14 @@ interface BlogCardProps {
 export function BlogCard({ path, frontmatter }: BlogCardProps) {
     return (
         <div>
-            <Card className="w-[320px] overflow-hidden border border-gray-200">
+            <Card className="w-[320px] min-h-[400px] overflow-hidden border border-gray-200 flex flex-col justify-between">
                 <Link to={path} prefetch="intent" unstable_viewTransition>
                     <div
                         className="h-[160px] bg-cover bg-center"
                         style={{ backgroundImage: `url(${frontmatter.thumbnail})` }}
                     ></div>
                 </Link>
-                <CardContent className="p-4">
+                <CardContent className="p-4 flex flex-col justify-between flex-grow">
                     <CardTitle>
                         <Link to={path} prefetch="intent" unstable_viewTransition>
                             {frontmatter.title}
@@ -26,11 +27,12 @@ export function BlogCard({ path, frontmatter }: BlogCardProps) {
                     <div>{frontmatter.published}</div>
                     <div>
                         {frontmatter.tags ? (
-                            <ul>
+                            <div>
                                 {frontmatter.tags.map((tag, index) => (
                                     <li key={index}>{tag}</li>
                                 ))}
-                            </ul>
+                                <Separator orientation="vertical" />
+                            </div>
                         ) : null}
                     </div>
                 </CardContent>
