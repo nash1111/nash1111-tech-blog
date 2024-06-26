@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0">
+    <channel>
+        <title>My Blog</title>
+        <link>http://example.com/</link>
+        <description>This is my personal blog</description>
+        <lastBuildDate>Wed, 26 Jun 2024 08:54:25 GMT</lastBuildDate>
+        <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
+        <generator>Feed for Node.js</generator>
+        <language>en</language>
+        <image>
+            <title>My Blog</title>
+            <url>http://example.com/image.png</url>
+            <link>http://example.com/</link>
+        </image>
+        <copyright>All rights reserved 2023, My Blog</copyright>
+        <item>
+            <title><![CDATA[このブログのレポジトリにpr-agent入れてみました]]></title>
+            <link>http://example.com/blog/blog.pragent</link>
+            <guid>http://example.com/blog/blog.pragent</guid>
+            <pubDate>Sun, 23 Jun 2024 00:00:00 GMT</pubDate>
+            <description><![CDATA[自動レビュワーであるpr-agentの導入記録]]></description>
+            <author>author@example.com (Author Name)</author>
+        </item>
+        <item>
+            <title><![CDATA[Rustのフレームワーク色々試したい時はShuttleがおすすめです]]></title>
+            <link>http://example.com/blog/blog.shuttleaxum</link>
+            <guid>http://example.com/blog/blog.shuttleaxum</guid>
+            <pubDate>Sun, 23 Jun 2024 00:00:00 GMT</pubDate>
+            <description><![CDATA[shuttleの紹介]]></description>
+            <author>author@example.com (Author Name)</author>
+        </item>
+        <item>
+            <title><![CDATA[VSCodeで定期git fetchとprune設定する]]></title>
+            <link>http://example.com/blog/blog.gitsettingsonvsc</link>
+            <guid>http://example.com/blog/blog.gitsettingsonvsc</guid>
+            <pubDate>Sun, 23 Jun 2024 00:00:00 GMT</pubDate>
+            <description><![CDATA[git prune on VSCode]]></description>
+            <author>author@example.com (Author Name)</author>
+        </item>
+        <item>
+            <title><![CDATA[個人ブログをNextからRemixに移行しました]]></title>
+            <link>http://example.com/blog/blog.nexttoremix</link>
+            <guid>http://example.com/blog/blog.nexttoremix</guid>
+            <pubDate>Sat, 25 May 2024 00:00:00 GMT</pubDate>
+            <description><![CDATA[NextからRemixに移行した時のメモ]]></description>
+            <author>author@example.com (Author Name)</author>
+        </item>
+        <item>
+            <title><![CDATA[GitHubCLIでこのブログのタスク管理ページを作りました]]></title>
+            <link>http://example.com/blog/blog.howtaskpagecreated</link>
+            <guid>http://example.com/blog/blog.howtaskpagecreated</guid>
+            <pubDate>Tue, 04 Jun 2024 00:00:00 GMT</pubDate>
+            <description><![CDATA[gh issueコマンドの結果をshadcn/uiのデータテーブルにした]]></description>
+            <author>author@example.com (Author Name)</author>
+        </item>
+        <item>
+            <title><![CDATA[Playwrightでスマホ幅のスクリーンショットを取りました]]></title>
+            <link>http://example.com/blog/blog.e2ewithiphone</link>
+            <guid>http://example.com/blog/blog.e2ewithiphone</guid>
+            <pubDate>Sun, 23 Jun 2024 00:00:00 GMT</pubDate>
+            <description><![CDATA[Playwrightでスマホ幅のスクリーンショットを取りました]]></description>
+            <author>author@example.com (Author Name)</author>
+        </item>
+        <item>
+            <title><![CDATA[実装、WF作成、デザインで自分が気をつけていること]]></title>
+            <link>http://example.com/blog/blog.whaticareabout</link>
+            <guid>http://example.com/blog/blog.whaticareabout</guid>
+            <pubDate>Fri, 14 Jun 2024 00:00:00 GMT</pubDate>
+            <description><![CDATA[気をつけていることリスト]]></description>
+            <author>author@example.com (Author Name)</author>
+        </item>
+    </channel>
+</rss>
