@@ -9,13 +9,13 @@ export default defineConfig({
       },
     },
     {
-      name: "Mobile Safari",
+      name: "MobileSafari",
       use: {
         ...devices["iPhone 13"],
       },
     },
     {
-      name: "Dark Desktop",
+      name: "DarkDesktop",
       use: {
         ...devices["Desktop Chrome"],
         colorScheme: "dark",
