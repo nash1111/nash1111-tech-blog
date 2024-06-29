@@ -1,10 +1,11 @@
 import type { MetaFunction } from "@remix-run/cloudflare";
 import { Link } from "@remix-run/react";
 import { Button } from "~/components/ui/button";
+import { authorName, siteTitle } from "~/lib/const";
 
 export const meta: MetaFunction = () => {
   return [
-    { title: "nash1111 techblog" },
+    { title: siteTitle },
     {
       name: "description",
       content: "nash1111 techblog with Remix and Vite on Cloudflare Pages.",
@@ -15,7 +16,7 @@ export const meta: MetaFunction = () => {
     },
     {
       name: "author",
-      content: "nash1111"
+      content: authorName
     },
     {
       name: "robots",

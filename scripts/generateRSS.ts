@@ -2,6 +2,8 @@ import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
 import { Feed } from "feed";
+import { meta } from "~/routes/_index";
+import { authorName, siteTitle } from "~/lib/const";
 
 const blogDir = path.join(process.cwd(), "app", "routes");
 
@@ -21,8 +23,8 @@ const getFrontmatters = () => {
 const generateRSS = () => {
   const frontmatters = getFrontmatters();
   const feed = new Feed({
-    title: "My Blog",
-    description: "This is my personal blog",
+    title: siteTitle,
+    description: meta.description,
     id: "http://example.com/",
     link: "http://example.com/",
     language: "en",
@@ -36,9 +38,7 @@ const generateRSS = () => {
       atom: "http://example.com/atom",
     },
     author: {
-      name: "Author Name",
-      email: "author@example.com",
-      link: "http://example.com/author",
+      name: authorName,
     },
   });
 
