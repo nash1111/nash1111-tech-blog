@@ -33,7 +33,7 @@ jobs:
       - name: Commit & Push
         run: |
           set -x
-          bun run generate-task
+          bun run scripts/generateRSS.ts
           git config user.name github-actions[bot]
           git config user.email github-actions[bot]@users.noreply.github.com
           git add .
