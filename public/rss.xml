@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+    <channel>
+        <title>nash1111 techblog</title>
+        <link>https://nash1111rgba.com</link>
+        <description>techblog, about Web Development</description>
+        <lastBuildDate>Sat, 29 Jun 2024 04:34:07 GMT</lastBuildDate>
+        <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
+        <generator>Feed for Node.js</generator>
+        <language>jp</language>
+        <image>
+            <title>nash1111 techblog</title>
+            <url>https://nash1111rgba.com/default_ogp.png</url>
+            <link>https://nash1111rgba.com</link>
+        </image>
+        <copyright>All rights reserved 2023, nash1111</copyright>
+        <item>
+            <title><![CDATA[このブログのレポジトリにpr-agent入れてみました]]></title>
+            <link>https://nash1111rgba.com/blog/pragent</link>
+            <guid>https://nash1111rgba.com/blog/pragent</guid>
+            <pubDate>Sun, 23 Jun 2024 00:00:00 GMT</pubDate>
+            <description><![CDATA[自動レビュワーであるpr-agentの導入記録]]></description>
+            <content:encoded><![CDATA[<p>AI</p><p>GitHubActions</p>]]></content:encoded>
+        </item>
+        <item>
+            <title><![CDATA[Rustのフレームワーク色々試したい時はShuttleがおすすめです]]></title>
+            <link>https://nash1111rgba.com/blog/shuttleaxum</link>
+            <guid>https://nash1111rgba.com/blog/shuttleaxum</guid>
+            <pubDate>Sun, 23 Jun 2024 00:00:00 GMT</pubDate>
+            <description><![CDATA[shuttleの紹介]]></description>
+            <content:encoded><![CDATA[<p>Rust</p><p>Shuttle</p>]]></content:encoded>
+        </item>
+        <item>
+            <title><![CDATA[VSCodeで定期git fetchとprune設定する]]></title>
+            <link>https://nash1111rgba.com/blog/gitsettingsonvsc</link>
+            <guid>https://nash1111rgba.com/blog/gitsettingsonvsc</guid>
+            <pubDate>Sun, 23 Jun 2024 00:00:00 GMT</pubDate>
+            <description><![CDATA[git prune on VSCode]]></description>
+            <content:encoded><![CDATA[<p>VisualStudioCode</p><p>Git</p>]]></content:encoded>
+        </item>
+        <item>
+            <title><![CDATA[個人ブログをNextからRemixに移行しました]]></title>
+            <link>https://nash1111rgba.com/blog/nexttoremix</link>
+            <guid>https://nash1111rgba.com/blog/nexttoremix</guid>
+            <pubDate>Sat, 25 May 2024 00:00:00 GMT</pubDate>
+            <description><![CDATA[NextからRemixに移行した時のメモ]]></description>
+            <content:encoded><![CDATA[<p>Next.js</p><p>Remix</p>]]></content:encoded>
+        </item>
+        <item>
+            <title><![CDATA[GitHubCLIでこのブログのタスク管理ページを作りました]]></title>
+            <link>https://nash1111rgba.com/blog/howtaskpagecreated</link>
+            <guid>https://nash1111rgba.com/blog/howtaskpagecreated</guid>
+            <pubDate>Tue, 04 Jun 2024 00:00:00 GMT</pubDate>
+            <description><![CDATA[gh issueコマンドの結果をshadcn/uiのデータテーブルにした]]></description>
+            <content:encoded><![CDATA[<p>GitHubCLI</p><p>shadcn/ui</p><p>Remix</p>]]></content:encoded>
+        </item>
+        <item>
+            <title><![CDATA[Playwrightでスマホ幅のスクリーンショットを取りました]]></title>
+            <link>https://nash1111rgba.com/blog/e2ewithiphone</link>
+            <guid>https://nash1111rgba.com/blog/e2ewithiphone</guid>
+            <pubDate>Sun, 23 Jun 2024 00:00:00 GMT</pubDate>
+            <description><![CDATA[Playwrightでスマホ幅のスクリーンショットを取りました]]></description>
+            <content:encoded><![CDATA[<p>Playwright</p>]]></content:encoded>
+        </item>
+        <item>
+            <title><![CDATA[実装、WF作成、デザインで自分が気をつけていること]]></title>
+            <link>https://nash1111rgba.com/blog/whaticareabout</link>
+            <guid>https://nash1111rgba.com/blog/whaticareabout</guid>
+            <pubDate>Fri, 14 Jun 2024 00:00:00 GMT</pubDate>
+            <description><![CDATA[気をつけていることリスト]]></description>
+            <content:encoded><![CDATA[<p>Design</p><p>Backend</p><p>Frontend</p>]]></content:encoded>
+        </item>
+    </channel>
+</rss>

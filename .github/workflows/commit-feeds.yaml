@@ -1,0 +1,45 @@
+name: Generate Feeds
+
+on:
+  pull_request:
+  workflow_dispatch:
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  generate-feed-json:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: oven-sh/setup-bun@v1
+      - name: Extract branch name
+        id: extract_branch
+        run: |
+          echo "branch=${{ github.head_ref }}" >> $GITHUB_ENV
+      - name: Checkout to branch
+        run: |
+          git checkout ${{ env.branch }}
+          git config --global url."https://${{ secrets.BLOG_TOKEN }}:x-oauth-basic@github.com/".insteadOf "https://github.com/"
+      - name: Check diff
+        id: diff
+        run: |
+          git add -N .
+          git diff --name-only --exit-code public/rss.xml public/feed.json public/atom.xml
+        continue-on-error: true
+      - name: Commit & Push
+        run: |
+          set -x
+          bun run generate-task
+          git config user.name github-actions[bot]
+          git config user.email github-actions[bot]@users.noreply.github.com
+          git add .
+          git commit -m 'chore: update public/rss.xml public/feed.json public/atom.xml' --allow-empty
+          git config pull.rebase false
+          git pull origin ${{ env.branch }}
+          git push origin ${{ env.branch }}
+        env:
+          GH_TOKEN: ${{ secrets.BLOG_TOKEN }}
