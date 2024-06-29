@@ -3,11 +3,19 @@ import path from "path";
 import matter from "gray-matter";
 import { Feed } from "feed";
 import { meta } from "~/routes/_index";
-import { authorName, siteTitle } from "~/lib/const";
+import {
+  AUTHOR_NAME,
+  DEFAULT_OGP,
+  DOMAIN,
+  FAVICON,
+  SITE_DESCRIPTION,
+  SITE_TITLE,
+} from "~/lib/const";
+import { Frontmatter } from "~/mdx";
 
 const blogDir = path.join(process.cwd(), "app", "routes");
 
-const getFrontmatters = () => {
+const getFrontmatters = (): (Frontmatter & { file: string })[] => {
   const files = fs.readdirSync(blogDir).filter((file) =>
     file.startsWith("blog.") && file.endsWith(".mdx")
   );
@@ -15,7 +23,7 @@ const getFrontmatters = () => {
     const filePath = path.join(blogDir, file);
     const fileContent = fs.readFileSync(filePath, "utf-8");
     const { data } = matter(fileContent);
-    return { ...data, file };
+    return { ...data, file } as Frontmatter & { file: string };
   });
   return frontmatters;
 };
@@ -23,14 +31,14 @@ const getFrontmatters = () => {
 const generateRSS = () => {
   const frontmatters = getFrontmatters();
   const feed = new Feed({
-    title: siteTitle,
-    description: meta.description,
-    id: "http://example.com/",
-    link: "http://example.com/",
-    language: "en",
-    image: "http://example.com/image.png",
-    favicon: "http://example.com/favicon.ico",
-    copyright: "All rights reserved 2023, My Blog",
+    title: SITE_TITLE,
+    description: SITE_DESCRIPTION,
+    id: DOMAIN,
+    link: DOMAIN,
+    language: "jp",
+    image: `${DOMAIN}/${DEFAULT_OGP}`,
+    favicon: `${DOMAIN}/${FAVICON}`,
+    copyright: `All rights reserved 2023, ${AUTHOR_NAME}`,
     updated: new Date(),
     generator: "Feed for Node.js",
     feedLinks: {
@@ -38,22 +46,26 @@ const generateRSS = () => {
       atom: "http://example.com/atom",
     },
     author: {
-      name: authorName,
+      name: AUTHOR_NAME,
     },
   });
 
   frontmatters.forEach((frontmatter) => {
     feed.addItem({
       title: frontmatter.title,
-      id: `http://example.com/blog/${frontmatter.file.replace(".mdx", "")}`,
-      link: `http://example.com/blog/${frontmatter.file.replace(".mdx", "")}`,
+      id: `${DOMAIN}/${
+        frontmatter.file.replace(".mdx", "").replace(/\./g, "/")
+      }`,
+      link: `${DOMAIN}/${
+        frontmatter.file.replace(".mdx", "").replace(/\./g, "/")
+      }`,
       description: frontmatter.description,
       content: frontmatter.content,
       author: [
         {
-          name: "Author Name",
-          email: "author@example.com",
-          link: "http://example.com/author",
+          name: AUTHOR_NAME,
+          email: "",
+          link: `${DOMAIN}/${AUTHOR_NAME}`,
         },
       ],
       date: new Date(frontmatter.published),
