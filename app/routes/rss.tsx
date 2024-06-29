@@ -1,6 +1,6 @@
 import { LoaderFunction } from "@remix-run/cloudflare";
 import { useLoaderData, useNavigate } from "@remix-run/react";
-import fs from "fs";
+import fs from "node:fs";
 import { ChevronLeft } from "lucide-react";
 import path from "path";
 import { xml2js } from "xml-js";
