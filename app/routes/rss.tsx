@@ -1,14 +1,15 @@
 import { LoaderFunction } from "@remix-run/cloudflare";
 import { useLoaderData, useNavigate } from "@remix-run/react";
-import fs from "node:fs";
 import { ChevronLeft } from "lucide-react";
-import path from "node:path";
 import { xml2js } from "xml-js";
 import { Button } from "~/components/ui/button";
 
-export const loader: LoaderFunction = () => {
-    const rssPath = path.join(process.cwd(), "public", "rss.xml");
-    const rssContent = fs.readFileSync(rssPath, "utf-8");
+export const loader: LoaderFunction = async () => {
+    // TODO: use node:fs after cloudflare supports it
+    // https://github.com/cloudflare/workers-sdk/issues/3430#issuecomment-1589351536
+    // https://developers.cloudflare.com/workers/runtime-apis/nodejs/
+    const response = await fetch("https://nash1111rgba.com/rss.xml");
+    const rssContent = await response.text();
     const rssJson = xml2js(rssContent, { compact: true });
     return rssJson;
 }
@@ -28,7 +29,6 @@ export default function Rss() {
                 <ChevronLeft className="w-4 h-4 mr-2" />
                 Back
             </Button>
-
         </>
     );
 }
