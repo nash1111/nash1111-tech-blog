@@ -6,6 +6,7 @@ import * as postGitSettingsOnVSCode from "~/routes/blog.gitsettingsonvsc.mdx";
 import * as postShuttleAxum from "~/routes/blog.shuttleaxum.mdx";
 import * as postE2EWithIphone from "~/routes/blog.e2ewithiphone.mdx";
 import * as postAddedRSS from "~/routes/blog.addedrss.mdx";
+import * as postAddShadcn from "~/routes/blog.addshadcnonremix.mdx";
 
 export const posts = [
   { path: "/blog/nexttoremix", data: postFirst },
@@ -16,6 +17,7 @@ export const posts = [
   { path: "/blog/shuttleaxum", data: postShuttleAxum },
   { path: "/blog/e2ewithiphone", data: postE2EWithIphone },
   { path: "/blog/addedrss", data: postAddedRSS },
+  { path: "/blog/addshadcnonremix", data: postAddShadcn },
 ];
 export function getPostDataByPath(path: string) {
   const post = posts.find((post) => post.path === path);
