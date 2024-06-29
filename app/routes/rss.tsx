@@ -2,7 +2,7 @@ import { LoaderFunction } from "@remix-run/cloudflare";
 import { useLoaderData, useNavigate } from "@remix-run/react";
 import fs from "node:fs";
 import { ChevronLeft } from "lucide-react";
-import path from "path";
+import path from "node:path";
 import { xml2js } from "xml-js";
 import { Button } from "~/components/ui/button";
 
