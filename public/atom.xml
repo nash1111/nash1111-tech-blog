@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://nash1111rgba.com</id>
+    <title>nash1111 techblog</title>
+    <updated>2024-06-29T04:34:07.948Z</updated>
+    <generator>Feed for Node.js</generator>
+    <author>
+        <name>nash1111</name>
+    </author>
+    <link rel="alternate" href="https://nash1111rgba.com"/>
+    <link rel="self" href="https://nash1111rgba.com/atom"/>
+    <subtitle>techblog, about Web Development</subtitle>
+    <logo>https://nash1111rgba.com/default_ogp.png</logo>
+    <icon>https://nash1111rgba.com/favicon.ico</icon>
+    <rights>All rights reserved 2023, nash1111</rights>
+    <entry>
+        <title type="html"><![CDATA[このブログのレポジトリにpr-agent入れてみました]]></title>
+        <id>https://nash1111rgba.com/blog/pragent</id>
+        <link href="https://nash1111rgba.com/blog/pragent"/>
+        <updated>2024-06-23T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[自動レビュワーであるpr-agentの導入記録]]></summary>
+        <content type="html"><![CDATA[<p>AI</p><p>GitHubActions</p>]]></content>
+        <author>
+            <name>nash1111</name>
+            <uri>https://nash1111rgba.com/nash1111</uri>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Rustのフレームワーク色々試したい時はShuttleがおすすめです]]></title>
+        <id>https://nash1111rgba.com/blog/shuttleaxum</id>
+        <link href="https://nash1111rgba.com/blog/shuttleaxum"/>
+        <updated>2024-06-23T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[shuttleの紹介]]></summary>
+        <content type="html"><![CDATA[<p>Rust</p><p>Shuttle</p>]]></content>
+        <author>
+            <name>nash1111</name>
+            <uri>https://nash1111rgba.com/nash1111</uri>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[VSCodeで定期git fetchとprune設定する]]></title>
+        <id>https://nash1111rgba.com/blog/gitsettingsonvsc</id>
+        <link href="https://nash1111rgba.com/blog/gitsettingsonvsc"/>
+        <updated>2024-06-23T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[git prune on VSCode]]></summary>
+        <content type="html"><![CDATA[<p>VisualStudioCode</p><p>Git</p>]]></content>
+        <author>
+            <name>nash1111</name>
+            <uri>https://nash1111rgba.com/nash1111</uri>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[個人ブログをNextからRemixに移行しました]]></title>
+        <id>https://nash1111rgba.com/blog/nexttoremix</id>
+        <link href="https://nash1111rgba.com/blog/nexttoremix"/>
+        <updated>2024-05-25T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[NextからRemixに移行した時のメモ]]></summary>
+        <content type="html"><![CDATA[<p>Next.js</p><p>Remix</p>]]></content>
+        <author>
+            <name>nash1111</name>
+            <uri>https://nash1111rgba.com/nash1111</uri>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[GitHubCLIでこのブログのタスク管理ページを作りました]]></title>
+        <id>https://nash1111rgba.com/blog/howtaskpagecreated</id>
+        <link href="https://nash1111rgba.com/blog/howtaskpagecreated"/>
+        <updated>2024-06-04T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[gh issueコマンドの結果をshadcn/uiのデータテーブルにした]]></summary>
+        <content type="html"><![CDATA[<p>GitHubCLI</p><p>shadcn/ui</p><p>Remix</p>]]></content>
+        <author>
+            <name>nash1111</name>
+            <uri>https://nash1111rgba.com/nash1111</uri>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Playwrightでスマホ幅のスクリーンショットを取りました]]></title>
+        <id>https://nash1111rgba.com/blog/e2ewithiphone</id>
+        <link href="https://nash1111rgba.com/blog/e2ewithiphone"/>
+        <updated>2024-06-23T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Playwrightでスマホ幅のスクリーンショットを取りました]]></summary>
+        <content type="html"><![CDATA[<p>Playwright</p>]]></content>
+        <author>
+            <name>nash1111</name>
+            <uri>https://nash1111rgba.com/nash1111</uri>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[実装、WF作成、デザインで自分が気をつけていること]]></title>
+        <id>https://nash1111rgba.com/blog/whaticareabout</id>
+        <link href="https://nash1111rgba.com/blog/whaticareabout"/>
+        <updated>2024-06-14T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[気をつけていることリスト]]></summary>
+        <content type="html"><![CDATA[<p>Design</p><p>Backend</p><p>Frontend</p>]]></content>
+        <author>
+            <name>nash1111</name>
+            <uri>https://nash1111rgba.com/nash1111</uri>
+        </author>
+    </entry>
+</feed>

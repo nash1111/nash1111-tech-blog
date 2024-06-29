@@ -2,7 +2,6 @@ import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
 import { Feed } from "feed";
-import { meta } from "~/routes/_index";
 import {
   AUTHOR_NAME,
   DEFAULT_OGP,
@@ -28,7 +27,7 @@ const getFrontmatters = (): (Frontmatter & { file: string })[] => {
   return frontmatters;
 };
 
-const generateRSS = () => {
+const generateFeeds = () => {
   const frontmatters = getFrontmatters();
   const feed = new Feed({
     title: SITE_TITLE,
@@ -42,8 +41,8 @@ const generateRSS = () => {
     updated: new Date(),
     generator: "Feed for Node.js",
     feedLinks: {
-      json: "http://example.com/json",
-      atom: "http://example.com/atom",
+      json: `${DOMAIN}/json`,
+      atom: `${DOMAIN}/atom`,
     },
     author: {
       name: AUTHOR_NAME,
@@ -60,7 +59,7 @@ const generateRSS = () => {
         frontmatter.file.replace(".mdx", "").replace(/\./g, "/")
       }`,
       description: frontmatter.description,
-      content: frontmatter.content,
+      content: frontmatter.tags?.map((tag) => `<p>${tag}</p>`).join(""),
       author: [
         {
           name: AUTHOR_NAME,
@@ -73,7 +72,14 @@ const generateRSS = () => {
   });
 
   fs.writeFileSync(path.join(process.cwd(), "public", "rss.xml"), feed.rss2());
-  console.log("RSS feed generated!");
+  fs.writeFileSync(
+    path.join(process.cwd(), "public", "feed.json"),
+    feed.json1(),
+  );
+  fs.writeFileSync(
+    path.join(process.cwd(), "public", "atom.xml"),
+    feed.atom1(),
+  );
 };
 
-generateRSS();
+generateFeeds();

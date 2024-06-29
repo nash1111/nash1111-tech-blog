@@ -21,6 +21,9 @@ export function Layout({ children }: { children: React.ReactNode }) {
       <head>
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/rss.xml" />
+        <link rel="alternate" type="application/json" title="JSON Feed" href="/feed.json" />
+        <link rel="alternate" type="application/atom+xml" title="Atom" href="/atom.xml" />
         <Meta />
         <Links />
       </head>
