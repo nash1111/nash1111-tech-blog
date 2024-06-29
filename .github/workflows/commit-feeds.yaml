@@ -28,7 +28,7 @@ jobs:
         id: diff
         run: |
           git add -N .
-          git diff --name-only --exit-code public/rss.xml public/feed.json publid/atom.xml
+          git diff --name-only --exit-code public/rss.xml public/feed.json public/atom.xml
         continue-on-error: true
       - name: Commit & Push
         run: |
@@ -37,7 +37,7 @@ jobs:
           git config user.name github-actions[bot]
           git config user.email github-actions[bot]@users.noreply.github.com
           git add .
-          git commit -m 'chore: update public/rss.xml public/feed.json publid/atom.xml' --allow-empty
+          git commit -m 'chore: update public/rss.xml public/feed.json public/atom.xml' --allow-empty
           git config pull.rebase false
           git pull origin ${{ env.branch }}
           git push origin ${{ env.branch }}
