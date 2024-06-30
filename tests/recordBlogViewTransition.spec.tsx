@@ -11,9 +11,12 @@ test.describe('/task page', () => {
         await page.waitForSelector('text=個人ブログをNextからRemixに移行しました');
         await page.getByText('個人ブログをNextからRemixに移行しました').click();
         await page.waitForLoadState('networkidle');
-        await page.keyboard.press('ArrowDown');
-        await page.waitForSelector('text=Back to BLOG');
-        await page.getByText('Back to BLOG').click();
+        await page.waitForTimeout(2000);
+        await page.evaluate(() => window.scrollTo(0, document.body.scrollHeight));
+        await page.waitForTimeout(2000);
+        await page.waitForSelector('button:has-text("Back to BLOG")');
+        await page.locator('button:has-text("Back to BLOG")').click();
+        await page.waitForTimeout(2000);
         await page.waitForLoadState('networkidle');
         await page.close();
         await page.video()?.saveAs(`test-results/videos/${testInfo.project.name}/blogPage.webm`);
