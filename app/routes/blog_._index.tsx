@@ -1,12 +1,14 @@
-import { Link } from "@remix-run/react";
-import * as postFirst from "./blog.first.mdx";
-import * as postHowTaskPageCreated from "./blog.howtaskpagecreated.mdx";
+
+import { BlogCard } from "~/components/BlogCard";
+import { posts } from "~/lib/posts";
 
 export default function BlogListComponent() {
+
     return (
-        <div className="p-10 prose">
-            <div><Link to={"/blog/first"} prefetch="intent" unstable_viewTransition>{postFirst.frontmatter.title}</Link></div>
-            <div><Link to={"/blog/howtaskpagecreated"} prefetch="intent" unstable_viewTransition>{postHowTaskPageCreated.frontmatter.title}</Link></div>
+        <div className="p-10 flex flex-wrap gap-4 w-full justify-center">
+            {posts.map(post => (
+                <BlogCard key={post.path} path={post.path} frontmatter={post.data.frontmatter} />
+            ))}
         </div>
     );
 }
