@@ -28,6 +28,11 @@ export default function Component() {
                 <meta property="og:type" content="article" />
                 <meta property="og:url" content={thumbnailUrl} />
                 <meta property="og:site_name" content="nash1111 techblog" />
+
+                <meta name="twitter:image" content={thumbnailUrl} />
+                <meta name="twitter:title" content={title} />
+                <meta name="twitter:description" content={description} />
+                <meta name="twitter:image" content={thumbnailUrl} />
             </head>
             <h2>{title}</h2>
             <BlogThumbnail imagePath={thumbnail} height="320px" />
