@@ -2,7 +2,11 @@
 
 [Visit My Blog](https://nash1111rgba.com/blog)
 
-## Automated Testing and Screenshots
+## ViewTransition
+
+![ViewTransition](https://raw.githubusercontent.com/nash1111/nash1111-tech-blog/master/public/blogPage.gif)
+
+## Automated Testing and Screenshots(Playwright)
 
 I use Playwright for end-to-end testing and automated screenshot generation.
 This ensures consistent quality across different devices and browsers. You can
