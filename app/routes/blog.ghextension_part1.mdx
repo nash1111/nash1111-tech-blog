@@ -1,68 +1,43 @@
 ---
 title: organizationを指定して、PRを古い順に表示するgh extensionを作成しました
-description: organizationを指定して、PRを古い順に表示するgh extensionを作成しました
+description: organizationを指定して、archiveされていないレポジトリのPRを古い順に表示するgh extensionを作成しました
 published: 2024-07-06
 tags: ["GitHubCLI", "GoLang"]
 thumbnail: /blogthumbnails/14.jpg
 ---
 
-## なぜ読んでいるのか
-プロダクトを良くするため  
-再現性のあるUI設計手法を探していたため
+## なぜ作ったか
+- organizationで放置しているPRを洗い出したかったため  
+- 最近Rustばかり書いていてGoを忘れそうだったため
 
-## 各章のメモ
+## 作ったもの
+[GitHub](https://github.com/nash1111/gh-org-pr-getter)
 
-### 1章 オブジェクト指向UI
-オブジェクト指向UIと、タスク指向UIの違いについて  
-オブジェクト指向UI(名詞->動詞)
-  - 操作対象(オブジェクト)を選択し、次にオブジェクトに対するアクションを選ぶ
-    - 例: GUI
-タスク指向UI(動詞->名詞)
-  - タスク(やりたいこと)を選び、次にオブジェクトやパラメータを指定する
-    - 例: CUI、ATM画面
+## 使い方
+```<your-organization-name>```にはorganization名を入れてください
+```
+gh extension install nash1111/gh-org-pr-getter
+gh org-pr-getter <your-organization-name>
+```
+CreatedAtとURLが出力されます
 
-タスク指向UIの問題  
-モーダルで、操作の自由度を奪い、余計な手続きを増やしてしまう  
-例外的に、ATM画面等の操作対象が明確なら良い
+## 作り方
+```
+gh extension create --precompiled=go org-pr-getter
+```
+このコマンドで、gh-org-pr-getterというディレクトリが作成されます(gh-は勝手に先頭にたされます)  
+Goのgh extensionテンプレートが作成され、デフォルトだとユーザー名を出力するようになっているので、[go-gh](https://github.com/cli/go-gh)読みつつコードを変更して完成です
 
-### 2章 オブジェクト指向UIの設計プロセス
-モデル、インタラクション、プレゼンテーションの順で具象度があがる  
-しかしその順でやる必要はない  
-グラフィックの形を優先的に検討するべきで、裏にある構造はプレゼンテーションとメンタルモデルの間の整合性をとるためのものに過ぎない
+## リリース方法
+```
+git tag v0.0.1
+git push origin v0.0.1
+```
+タグをつけてpushすると、テンプレートに元から存在するrelease.ymlが動いてリリースされます
 
-### 3章 オブジェクト指向UI設計の実践
-1. オブジェクトの抽出
-2. ビュートナビゲーションの検討
-3. レイアウトパターンの適用
-等の実践的な手法の紹介
+## 今後
+- 一度に全レポジトリの全PRを集めるのをやめたいです(制限に引っかかる可能性があるため)
+- tview等を使ってレポジトリごとにフレームを取ってTUIアプリにしたいです
 
-### 4章 ワークアウト
-メモアプリケーションを例にワークアウトを行った
-
-### 印象的だったこと
-グラフィックの形がデザインの目的という記述
-  - 私はバックエンドの実装に引きづられて書いてしまう
-
-4章レベル1メモアプリケーションのデザイン
-  - 1,2,3章の手順に従うと、ほぼ解説に近い形になり、手法に再現性を感じました
-  - また、SimpleNoteや、iPhoneのメモ等、使いやすいと感じた
-
-4章の残りのワークアウトをやります  
-自分がTUIツールを好むのは、タスク指向からオブジェクト指向への変遷を楽しんでいるからかもしれません  
-
-### 疑問
-UI/UX決める局面では、実装等のソフトウェア的事情を忘れたほうが良い?
-  - この実装だとcontext面倒になりそう, この機能を実現するにはAPIが必要...等無意識のうちに
-
-タスク指向と、オブジェクト指向の使い分けはどうすれば良い?
-  - ATMがタスク指向でも許される例としてあげられていたが、他に許される場合はあるのか?
-  - 特定の業務アプリなら許されるのか?
-  - 特定の業務かつ複数タスクの場合はどうか?
-
-UI/UX設計自体を自動化することは可能か？
-  - mecab
-
-### 参考
-[OOUI – オブジェクトベースのUIモデリング(sociomedia様サイト)](https://www.sociomedia.co.jp/7279)  
-[オブジェクト指向UIデザイン──使いやすいソフトウェアの原理 (WEB+DB PRESS plusシリーズ)(アマゾンリンク)](https://amzn.to/3W8RMsT)  
-[Object-Oriented Interface(IBM様サイト)](https://www.ibm.com/docs/en/aix/7.2?topic=processes-object-oriented-interface)
+## 参考
+[Creating GitHub CLI extensions](https://docs.github.com/en/github-cli/github-cli/creating-github-cli-extensions)
