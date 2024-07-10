@@ -9,6 +9,7 @@ import * as postAddedRSS from "~/routes/blog.addedrss.mdx";
 import * as postAddShadcn from "~/routes/blog.addshadcnonremix.mdx";
 import * as postOouiPart1 from "~/routes/blog.ooui_part1.mdx";
 import * as postGhExtensionPart1 from "~/routes/blog.ghextension_part1.mdx";
+import * as postStopTooMuchReview from "~/routes/blog.stoptoomuchreview.mdx";
 
 export const posts = [
   { path: "/blog/nexttoremix", data: postFirst },
@@ -22,6 +23,7 @@ export const posts = [
   { path: "/blog/addshadcnonremix", data: postAddShadcn },
   { path: "/blog/ooui_part1", data: postOouiPart1 },
   { path: "/blog/ghextension_part1", data: postGhExtensionPart1 },
+  { path: "/blog/stoptoomuchreview", data: postStopTooMuchReview },
 ];
 export function getPostDataByPath(path: string) {
   const post = posts.find((post) => post.path === path);
