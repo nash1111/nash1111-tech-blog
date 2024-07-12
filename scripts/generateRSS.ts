@@ -68,6 +68,7 @@ const generateFeeds = () => {
         },
       ],
       date: new Date(frontmatter.published),
+      category: frontmatter.tags?.map((tag) => ({ name: tag })),
     });
   });
 

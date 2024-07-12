@@ -19,7 +19,11 @@
             "author": {
                 "name": "nash1111",
                 "url": "https://nash1111rgba.com/nash1111"
-            }
+            },
+            "tags": [
+                "AI",
+                "GitHubActions"
+            ]
         },
         {
             "id": "https://nash1111rgba.com/blog/shuttleaxum",
@@ -31,7 +35,11 @@
             "author": {
                 "name": "nash1111",
                 "url": "https://nash1111rgba.com/nash1111"
-            }
+            },
+            "tags": [
+                "Rust",
+                "Shuttle"
+            ]
         },
         {
             "id": "https://nash1111rgba.com/blog/gitsettingsonvsc",
@@ -43,7 +51,27 @@
             "author": {
                 "name": "nash1111",
                 "url": "https://nash1111rgba.com/nash1111"
-            }
+            },
+            "tags": [
+                "VisualStudioCode",
+                "Git"
+            ]
+        },
+        {
+            "id": "https://nash1111rgba.com/blog/ghextension_part1",
+            "content_html": "<p>GitHubCLI</p><p>GoLang</p>",
+            "url": "https://nash1111rgba.com/blog/ghextension_part1",
+            "title": "organizationを指定して、PRを古い順に表示するgh extensionを作成しました",
+            "summary": "organizationを指定して、archiveされていないレポジトリのPRを古い順に表示するgh extensionを作成しました",
+            "date_modified": "2024-07-06T00:00:00.000Z",
+            "author": {
+                "name": "nash1111",
+                "url": "https://nash1111rgba.com/nash1111"
+            },
+            "tags": [
+                "GitHubCLI",
+                "GoLang"
+            ]
         },
         {
             "id": "https://nash1111rgba.com/blog/nexttoremix",
@@ -55,7 +83,11 @@
             "author": {
                 "name": "nash1111",
                 "url": "https://nash1111rgba.com/nash1111"
-            }
+            },
+            "tags": [
+                "Next.js",
+                "Remix"
+            ]
         },
         {
             "id": "https://nash1111rgba.com/blog/howtaskpagecreated",
@@ -67,7 +99,27 @@
             "author": {
                 "name": "nash1111",
                 "url": "https://nash1111rgba.com/nash1111"
-            }
+            },
+            "tags": [
+                "GitHubCLI",
+                "shadcn/ui",
+                "Remix"
+            ]
+        },
+        {
+            "id": "https://nash1111rgba.com/blog/addedrss",
+            "content_html": "<p>Remix</p>",
+            "url": "https://nash1111rgba.com/blog/addedrss",
+            "title": "このブログにRSSを追加しました",
+            "summary": "RSS追加",
+            "date_modified": "2024-06-29T00:00:00.000Z",
+            "author": {
+                "name": "nash1111",
+                "url": "https://nash1111rgba.com/nash1111"
+            },
+            "tags": [
+                "Remix"
+            ]
         },
         {
             "id": "https://nash1111rgba.com/blog/e2ewithiphone",
@@ -79,7 +131,43 @@
             "author": {
                 "name": "nash1111",
                 "url": "https://nash1111rgba.com/nash1111"
-            }
+            },
+            "tags": [
+                "Playwright"
+            ]
+        },
+        {
+            "id": "https://nash1111rgba.com/blog/addshadcnonremix",
+            "content_html": "<p>Remix</p><p>shadcn/ui</p><p>Frontend</p>",
+            "url": "https://nash1111rgba.com/blog/addshadcnonremix",
+            "title": "Remixにshadcn/ui導入した際のメモ",
+            "summary": "remixにshadcn/ui導入した際のメモ",
+            "date_modified": "2024-06-29T00:00:00.000Z",
+            "author": {
+                "name": "nash1111",
+                "url": "https://nash1111rgba.com/nash1111"
+            },
+            "tags": [
+                "Remix",
+                "shadcn/ui",
+                "Frontend"
+            ]
+        },
+        {
+            "id": "https://nash1111rgba.com/blog/stoptoomuchreview",
+            "content_html": "<p>AI</p><p>GitHubActions</p>",
+            "url": "https://nash1111rgba.com/blog/stoptoomuchreview",
+            "title": "pr-agentのレビューを抑制しました",
+            "summary": "pr-agentのレビューを抑制しました",
+            "date_modified": "2024-07-06T00:00:00.000Z",
+            "author": {
+                "name": "nash1111",
+                "url": "https://nash1111rgba.com/nash1111"
+            },
+            "tags": [
+                "AI",
+                "GitHubActions"
+            ]
         },
         {
             "id": "https://nash1111rgba.com/blog/whaticareabout",
@@ -91,7 +179,29 @@
             "author": {
                 "name": "nash1111",
                 "url": "https://nash1111rgba.com/nash1111"
-            }
+            },
+            "tags": [
+                "Design",
+                "Backend",
+                "Frontend"
+            ]
+        },
+        {
+            "id": "https://nash1111rgba.com/blog/ooui_part1",
+            "content_html": "<p>Design</p><p>Frontend</p><p>NEED_HELP</p>",
+            "url": "https://nash1111rgba.com/blog/ooui_part1",
+            "title": "オブジェクト指向UI(OOUI)デザイン4章レベル1まで読んだのでメモ",
+            "summary": "オブジェクト指向UI(OOUI)デザイン4章レベル1まで読んだのでメモ",
+            "date_modified": "2024-07-06T00:00:00.000Z",
+            "author": {
+                "name": "nash1111",
+                "url": "https://nash1111rgba.com/nash1111"
+            },
+            "tags": [
+                "Design",
+                "Frontend",
+                "NEED_HELP"
+            ]
         }
     ]
 }
