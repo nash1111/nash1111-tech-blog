@@ -1,0 +1,31 @@
+---
+title: EffectTSが気になっているため、使ってみた記事を近日中に書きます
+description: EffectTSが気になっているため、使ってみた記事を近日中に書きます
+published: 2024-07-20
+tags: ["TypeScript", "EffectTS"]
+thumbnail: /blogthumbnails/15.jpg
+---
+
+## 動機
+なぜEffectTSが気になっているか
+- TypeScriptでバックエンドを作成すると、自明なtry catch等で記述が増えてしまうと感じたため
+    - Resultがほしい  
+- バックエンドをTSで書く場合、Zodやvalibotを使っているケースが多そうだが、[@effect-ts/schema](https://github.com/effect-ts/effect/tree/main/packages/schema)でも出来ないか？と気になっている
+    - zodもvalibotも、自分はあまり強い関心が湧いておらず避けたい
+    - zodはzodiosが便利な反面、tree shakingが効かずbundle sizeが大きい
+      - zodiosはhono対応していなそう
+    - valibotは軽量だが、まだユーザーが少なく知見が出回っていなそう
+- [EffectTSのホームページ](https://effect.website/),[Youtube](https://www.youtube.com/@effect-ts), [Twitter](https://x.com/EffectTS_), [Discord](discord.gg/effect-ts)がどれも活発
+
+
+## 個人の気持ち
+私は最近は技術に対して強い思想は無く、プロダクトの価値が第一かなと思っています  
+一方で技術スタックに無関心というほどでもなく、Web開発をどうやっていくべきかは考えたりします
+- バックエンドとフロントエンドは同一の言語の方が楽そう
+- コンパイラは厳しければ厳しいほど良い
+- 一方で、ORMぐらいは存在していないと、Web開発ではしんどい  
+
+という観点から、バックエンドもフロントエンドもRustで開発するのが良いのではと考えています  
+バックエンドは薄く作るならhyper, utiopa等の便利ツール使っていくならaxumかなと  
+フロントエンドはYew等を介すか、自分でフレームワークを作成してwasmを吐けば良く、困ったらwasmを読めば良いというのが現時点での私の意見です  
+何故か思想が強い人と誤認されることがあるのであまり話さないようにしています
