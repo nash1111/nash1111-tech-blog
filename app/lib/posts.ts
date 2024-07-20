@@ -10,7 +10,7 @@ import * as postAddShadcn from "~/routes/blog.addshadcnonremix.mdx";
 import * as postOouiPart1 from "~/routes/blog.ooui_part1.mdx";
 import * as postGhExtensionPart1 from "~/routes/blog.ghextension_part1.mdx";
 import * as postStopTooMuchReview from "~/routes/blog.stoptoomuchreview.mdx";
-import * as postEffectTSPart1 from "~/routes/blog.effectts_part1.mdx";
+import * as postEffectTSPart1 from "~/routes/diary.effectts_part1.mdx";
 
 export const posts = [
   { path: "/blog/nexttoremix", data: postFirst },

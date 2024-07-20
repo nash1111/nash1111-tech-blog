@@ -16,8 +16,8 @@ export const Header = () => {
                 <Link to="/blog" prefetch="intent" unstable_viewTransition>
                     <Button variant="default">Blog</Button>
                 </Link>
-                <Link to="/about" prefetch="intent" unstable_viewTransition>
-                    <Button variant="default">about</Button>
+                <Link to="/diary" prefetch="intent" unstable_viewTransition>
+                    <Button variant="default">Diary</Button>
                 </Link>
 
                 <NavigationMenu>
@@ -57,8 +57,13 @@ const components: { id: number, title: string; href: string }[] = [
         href: "/snippets",
     },
     {
-        id:3,
+        id: 3,
         title: "Old Blog",
         href: "https://nash1111-old-blog.pages.dev/"
+    },
+    {
+        id: 4,
+        title: "About",
+        href: "/about",
     }
 ]

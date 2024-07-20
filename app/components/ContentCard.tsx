@@ -2,12 +2,12 @@ import { Link } from "@remix-run/react";
 import { Card, CardContent, CardTitle } from "~/components/ui/card";
 import { Frontmatter } from "~/mdx";
 
-interface BlogCardProps {
+interface CardContentProps {
     path: string;
     frontmatter: Frontmatter;
 }
 
-export function BlogCard({ path, frontmatter }: BlogCardProps) {
+export function ContentCard({ path, frontmatter }: CardContentProps) {
     return (
         <div>
             <Card className="w-[320px] min-h-[360px] overflow-hidden border border-gray-200 flex flex-col justify-between">
