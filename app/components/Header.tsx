@@ -65,5 +65,10 @@ const components: { id: number, title: string; href: string }[] = [
         id: 4,
         title: "About",
         href: "/about",
+    },
+    {
+        id: 5,
+        title: "Contact",
+        href: "/contact",
     }
 ]
