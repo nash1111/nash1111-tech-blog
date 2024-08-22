@@ -1,13 +1,14 @@
 
-import { ContentCard } from "~/components/ContentCard";
 import { posts } from "~/lib/posts";
+import { BlogCard } from "deps-less-ui";
 
 export default function BlogListComponent() {
 
     return (
-        <div className="p-10 flex flex-wrap gap-4 w-full justify-center">
+        <div>
+
             {posts.map(post => (
-                <ContentCard key={post.path} path={post.path} frontmatter={post.data.frontmatter} />
+                <BlogCard key={post.path} title={post.data.frontmatter.title} url={post.path} />
             ))}
         </div>
     );
