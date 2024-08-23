@@ -1,14 +1,16 @@
 
 import { posts } from "~/lib/posts";
 import { BlogCard } from "deps-less-ui";
+import { Link } from "@remix-run/react";
 
 export default function BlogListComponent() {
 
     return (
-        <div>
-
+        <div className="p-10 flex flex-wrap gap-4 w-full justify-center">
             {posts.map(post => (
-                <BlogCard key={post.path} title={post.data.frontmatter.title} url={post.path} />
+                <Link key={post.path} to={post.path} prefetch="intent" unstable_viewTransition>
+                    <BlogCard title={post.data.frontmatter.title} imageUrl={post.data.frontmatter.thumbnail} tags={post.data.frontmatter.tags} />
+                </Link>
             ))}
         </div>
     );
