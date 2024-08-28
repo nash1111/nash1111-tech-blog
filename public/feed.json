@@ -26,6 +26,23 @@
             ]
         },
         {
+            "id": "https://nash1111rgba.com/blog/ooui_part2",
+            "content_html": "<p>Design</p><p>Frontend</p><p>NEED_HELP</p>",
+            "url": "https://nash1111rgba.com/blog/ooui_part2",
+            "title": "オブジェクト指向UI(OOUI)デザイン読み終えたのでメモ",
+            "summary": "オブジェクト指向UI(OOUI)デザイン読み終えたのでメモ",
+            "date_modified": "2024-08-18T00:00:00.000Z",
+            "author": {
+                "name": "nash1111",
+                "url": "https://nash1111rgba.com/nash1111"
+            },
+            "tags": [
+                "Design",
+                "Frontend",
+                "NEED_HELP"
+            ]
+        },
+        {
             "id": "https://nash1111rgba.com/blog/shuttleaxum",
             "content_html": "<p>Rust</p><p>Shuttle</p>",
             "url": "https://nash1111rgba.com/blog/shuttleaxum",
@@ -39,6 +56,21 @@
             "tags": [
                 "Rust",
                 "Shuttle"
+            ]
+        },
+        {
+            "id": "https://nash1111rgba.com/blog/effect_playground",
+            "content_html": "<p>TypeScript</p>",
+            "url": "https://nash1111rgba.com/blog/effect_playground",
+            "title": "EffectTSのPlaygroundが出てました",
+            "summary": "EffectTSのPlaygroundが出てました",
+            "date_modified": "2024-07-31T00:00:00.000Z",
+            "author": {
+                "name": "nash1111",
+                "url": "https://nash1111rgba.com/nash1111"
+            },
+            "tags": [
+                "TypeScript"
             ]
         },
         {

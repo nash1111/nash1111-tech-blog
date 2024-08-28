@@ -4,7 +4,7 @@
         <title>nash1111 techblog</title>
         <link>https://nash1111rgba.com</link>
         <description>techblog, about Web Development</description>
-        <lastBuildDate>Fri, 12 Jul 2024 05:33:04 GMT</lastBuildDate>
+        <lastBuildDate>Wed, 28 Aug 2024 10:12:57 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>Feed for Node.js</generator>
         <language>jp</language>
@@ -25,6 +25,17 @@
             <category>GitHubActions</category>
         </item>
         <item>
+            <title><![CDATA[オブジェクト指向UI(OOUI)デザイン読み終えたのでメモ]]></title>
+            <link>https://nash1111rgba.com/blog/ooui_part2</link>
+            <guid>https://nash1111rgba.com/blog/ooui_part2</guid>
+            <pubDate>Sun, 18 Aug 2024 00:00:00 GMT</pubDate>
+            <description><![CDATA[オブジェクト指向UI(OOUI)デザイン読み終えたのでメモ]]></description>
+            <content:encoded><![CDATA[<p>Design</p><p>Frontend</p><p>NEED_HELP</p>]]></content:encoded>
+            <category>Design</category>
+            <category>Frontend</category>
+            <category>NEED_HELP</category>
+        </item>
+        <item>
             <title><![CDATA[Rustのフレームワーク色々試したい時はShuttleがおすすめです]]></title>
             <link>https://nash1111rgba.com/blog/shuttleaxum</link>
             <guid>https://nash1111rgba.com/blog/shuttleaxum</guid>
@@ -33,6 +44,15 @@
             <content:encoded><![CDATA[<p>Rust</p><p>Shuttle</p>]]></content:encoded>
             <category>Rust</category>
             <category>Shuttle</category>
+        </item>
+        <item>
+            <title><![CDATA[EffectTSのPlaygroundが出てました]]></title>
+            <link>https://nash1111rgba.com/blog/effect_playground</link>
+            <guid>https://nash1111rgba.com/blog/effect_playground</guid>
+            <pubDate>Wed, 31 Jul 2024 00:00:00 GMT</pubDate>
+            <description><![CDATA[EffectTSのPlaygroundが出てました]]></description>
+            <content:encoded><![CDATA[<p>TypeScript</p>]]></content:encoded>
+            <category>TypeScript</category>
         </item>
         <item>
             <title><![CDATA[VSCodeで定期git fetchとprune設定する]]></title>

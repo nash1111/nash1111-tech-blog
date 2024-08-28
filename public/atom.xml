@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://nash1111rgba.com</id>
     <title>nash1111 techblog</title>
-    <updated>2024-07-12T05:33:04.094Z</updated>
+    <updated>2024-08-28T10:12:57.928Z</updated>
     <generator>Feed for Node.js</generator>
     <author>
         <name>nash1111</name>
@@ -28,6 +28,21 @@
         <category label="GitHubActions"/>
     </entry>
     <entry>
+        <title type="html"><![CDATA[オブジェクト指向UI(OOUI)デザイン読み終えたのでメモ]]></title>
+        <id>https://nash1111rgba.com/blog/ooui_part2</id>
+        <link href="https://nash1111rgba.com/blog/ooui_part2"/>
+        <updated>2024-08-18T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[オブジェクト指向UI(OOUI)デザイン読み終えたのでメモ]]></summary>
+        <content type="html"><![CDATA[<p>Design</p><p>Frontend</p><p>NEED_HELP</p>]]></content>
+        <author>
+            <name>nash1111</name>
+            <uri>https://nash1111rgba.com/nash1111</uri>
+        </author>
+        <category label="Design"/>
+        <category label="Frontend"/>
+        <category label="NEED_HELP"/>
+    </entry>
+    <entry>
         <title type="html"><![CDATA[Rustのフレームワーク色々試したい時はShuttleがおすすめです]]></title>
         <id>https://nash1111rgba.com/blog/shuttleaxum</id>
         <link href="https://nash1111rgba.com/blog/shuttleaxum"/>
@@ -40,6 +55,19 @@
         </author>
         <category label="Rust"/>
         <category label="Shuttle"/>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[EffectTSのPlaygroundが出てました]]></title>
+        <id>https://nash1111rgba.com/blog/effect_playground</id>
+        <link href="https://nash1111rgba.com/blog/effect_playground"/>
+        <updated>2024-07-31T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[EffectTSのPlaygroundが出てました]]></summary>
+        <content type="html"><![CDATA[<p>TypeScript</p>]]></content>
+        <author>
+            <name>nash1111</name>
+            <uri>https://nash1111rgba.com/nash1111</uri>
+        </author>
+        <category label="TypeScript"/>
     </entry>
     <entry>
         <title type="html"><![CDATA[VSCodeで定期git fetchとprune設定する]]></title>
