@@ -34,6 +34,7 @@
     "autoprefixer": "^10.4.19",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.0",
+    "deps-less-ui": "0.0.10",
     "feed": "^4.2.2",
     "front-matter": "^4.0.2",
     "gray-matter": "^4.0.3",
