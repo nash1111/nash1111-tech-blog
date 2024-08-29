@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://nash1111rgba.com</id>
     <title>nash1111 techblog</title>
-    <updated>2024-08-28T10:12:57.928Z</updated>
+    <updated>2024-08-29T10:09:39.785Z</updated>
     <generator>Feed for Node.js</generator>
     <author>
         <name>nash1111</name>
@@ -13,6 +13,20 @@
     <logo>https://nash1111rgba.com/default_ogp.png</logo>
     <icon>https://nash1111rgba.com/favicon.ico</icon>
     <rights>All rights reserved 2023, nash1111</rights>
+    <entry>
+        <title type="html"><![CDATA[UIライブラリ作り始めました]]></title>
+        <id>https://nash1111rgba.com/blog/depslessui_part1</id>
+        <link href="https://nash1111rgba.com/blog/depslessui_part1"/>
+        <updated>2024-08-29T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[UIライブラリ作り始めました]]></summary>
+        <content type="html"><![CDATA[<p>Design</p><p>Frontend</p>]]></content>
+        <author>
+            <name>nash1111</name>
+            <uri>https://nash1111rgba.com/nash1111</uri>
+        </author>
+        <category label="Design"/>
+        <category label="Frontend"/>
+    </entry>
     <entry>
         <title type="html"><![CDATA[このブログのレポジトリにpr-agent入れてみました]]></title>
         <id>https://nash1111rgba.com/blog/pragent</id>

@@ -4,7 +4,7 @@
         <title>nash1111 techblog</title>
         <link>https://nash1111rgba.com</link>
         <description>techblog, about Web Development</description>
-        <lastBuildDate>Wed, 28 Aug 2024 10:12:57 GMT</lastBuildDate>
+        <lastBuildDate>Thu, 29 Aug 2024 10:09:39 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>Feed for Node.js</generator>
         <language>jp</language>
@@ -14,6 +14,16 @@
             <link>https://nash1111rgba.com</link>
         </image>
         <copyright>All rights reserved 2023, nash1111</copyright>
+        <item>
+            <title><![CDATA[UIライブラリ作り始めました]]></title>
+            <link>https://nash1111rgba.com/blog/depslessui_part1</link>
+            <guid>https://nash1111rgba.com/blog/depslessui_part1</guid>
+            <pubDate>Thu, 29 Aug 2024 00:00:00 GMT</pubDate>
+            <description><![CDATA[UIライブラリ作り始めました]]></description>
+            <content:encoded><![CDATA[<p>Design</p><p>Frontend</p>]]></content:encoded>
+            <category>Design</category>
+            <category>Frontend</category>
+        </item>
         <item>
             <title><![CDATA[このブログのレポジトリにpr-agent入れてみました]]></title>
             <link>https://nash1111rgba.com/blog/pragent</link>
