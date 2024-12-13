@@ -6,22 +6,6 @@ interface NavigationButtonProps {
     label: string;
 }
 
-//function NavImage({ src, alt, id }) {
-//    const to = `/images/${idx}`;
-//    const vt = unstable_useViewTransitionState(href);
-//    return (
-//      <Link to={to} unstable_viewTransition>
-//        <img
-//          src={src}
-//          alt={alt}
-//          style={{
-//            viewTransitionName: vt ? "image-expand" : "",
-//          }}
-//        />
-//      </Link>
-//    );
-//  }
-
 export const NavigationButton = ({ path, label }: NavigationButtonProps) => {
     return (
         <div className="flex gap-4">
