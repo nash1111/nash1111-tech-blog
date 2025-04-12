@@ -12,6 +12,7 @@ import * as postGhExtensionPart1 from "~/routes/blog.ghextension_part1.mdx";
 import * as postStopTooMuchReview from "~/routes/blog.stoptoomuchreview.mdx";
 import * as postOouiPart2 from "~/routes/blog.ooui_part2.mdx";
 import * as depsLessUiPart1 from "~/routes/blog.depslessui_part1.mdx";
+import * as firstSaasStack from "~/routes/blog.first_saas_stack.mdx";
 
 export const posts = [
   { path: "/blog/nexttoremix", data: postFirst },
@@ -28,6 +29,7 @@ export const posts = [
   { path: "/blog/stoptoomuchreview", data: postStopTooMuchReview },
   { path: "/blog/ooui_part2", data: postOouiPart2 },
   { path: "/blog/depslessui_part1", data: depsLessUiPart1 },
+  { path: "/blog/first_saas_stack", data: firstSaasStack },
 ];
 export function getPostDataByPath(path: string) {
   const post = posts.find((post) => post.path === path);
