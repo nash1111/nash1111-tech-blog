@@ -11,7 +11,7 @@ export function ContentCard({ path, frontmatter }: CardContentProps) {
     return (
         <div>
             <Card className="w-[320px] min-h-[360px] overflow-hidden border border-gray-200 flex flex-col justify-between">
-                <Link to={path} prefetch="intent" unstable_viewTransition>
+                <Link to={path} prefetch="intent" unstable_viewtransition="true">
                     <div
                         className="h-[160px] bg-cover bg-center"
                         style={{ backgroundImage: `url(${frontmatter.thumbnail})` }}
@@ -19,7 +19,7 @@ export function ContentCard({ path, frontmatter }: CardContentProps) {
                 </Link>
                 <CardContent className="p-4 flex flex-col justify-between flex-grow">
                     <CardTitle>
-                        <Link to={path} prefetch="intent" unstable_viewTransition>
+                        <Link to={path} prefetch="intent" unstable_viewtransition="true">
                             {frontmatter.title}
                         </Link>
                     </CardTitle>

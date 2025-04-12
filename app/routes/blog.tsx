@@ -38,7 +38,7 @@ export default function Component() {
             <BlogThumbnail imagePath={thumbnail} height="320px" />
             <Outlet />
             <div className="flex justify-between items-center">
-                <Link to="/blog" prefetch="intent" unstable_viewTransition>
+                <Link to="/blog" prefetch="intent" unstable_viewtransition="true">
                     <Button variant="link"><ChevronLeft className="w-4 h-4 mr-2" />Back to BLOG</Button>
                 </Link>
                 <a href={tweetUrl} target="_blank" rel="noopener noreferrer">
