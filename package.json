@@ -28,7 +28,7 @@
     "@radix-ui/react-slot": "^1.0.2",
     "@remix-run/cloudflare": "^2.8.1",
     "@remix-run/cloudflare-pages": "^2.8.1",
-    "@remix-run/react": "^2.8.1",
+    "@remix-run/react": "^2.16.5",
     "@tailwindcss/typography": "^0.5.12",
     "@tanstack/react-table": "^8.16.0",
     "autoprefixer": "^10.4.19",

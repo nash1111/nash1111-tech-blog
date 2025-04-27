@@ -10,7 +10,7 @@ interface NavigationButtonProps {
 //    const to = `/images/${idx}`;
 //    const vt = unstable_useViewTransitionState(href);
 //    return (
-//      <Link to={to} unstable_viewTransition>
+//      <Link to={to} viewTransition>
 //        <img
 //          src={src}
 //          alt={alt}
@@ -25,7 +25,7 @@ interface NavigationButtonProps {
 export const NavigationButton = ({ path, label }: NavigationButtonProps) => {
     return (
         <div className="flex gap-4">
-            <Link prefetch="intent" to={path} unstable_viewTransition>
+            <Link prefetch="intent" to={path} viewTransition>
                 <Button variant="default">{label}</Button>
             </Link>
         </div>
