@@ -4,7 +4,7 @@
         <title>nash1111 techblog</title>
         <link>https://nash1111rgba.com</link>
         <description>techblog, about Web Development</description>
-        <lastBuildDate>Thu, 29 Aug 2024 10:09:39 GMT</lastBuildDate>
+        <lastBuildDate>Sun, 27 Apr 2025 09:01:10 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>Feed for Node.js</generator>
         <language>jp</language>
@@ -15,21 +15,71 @@
         </image>
         <copyright>All rights reserved 2023, nash1111</copyright>
         <item>
-            <title><![CDATA[UIライブラリ作り始めました]]></title>
-            <link>https://nash1111rgba.com/blog/depslessui_part1</link>
-            <guid>https://nash1111rgba.com/blog/depslessui_part1</guid>
-            <pubDate>Thu, 29 Aug 2024 00:00:00 GMT</pubDate>
-            <description><![CDATA[UIライブラリ作り始めました]]></description>
-            <content:encoded><![CDATA[<p>Design</p><p>Frontend</p>]]></content:encoded>
+            <title><![CDATA[実装、WF作成、デザインで自分が気をつけていること]]></title>
+            <link>https://nash1111rgba.com/blog/whaticareabout</link>
+            <guid>https://nash1111rgba.com/blog/whaticareabout</guid>
+            <pubDate>Fri, 14 Jun 2024 00:00:00 GMT</pubDate>
+            <description><![CDATA[気をつけていることリスト]]></description>
+            <content:encoded><![CDATA[<p>Design</p><p>Backend</p><p>Frontend</p>]]></content:encoded>
             <category>Design</category>
+            <category>Backend</category>
             <category>Frontend</category>
         </item>
         <item>
-            <title><![CDATA[このブログのレポジトリにpr-agent入れてみました]]></title>
-            <link>https://nash1111rgba.com/blog/pragent</link>
-            <guid>https://nash1111rgba.com/blog/pragent</guid>
+            <title><![CDATA[個人ブログをNextからRemixに移行しました]]></title>
+            <link>https://nash1111rgba.com/blog/nexttoremix</link>
+            <guid>https://nash1111rgba.com/blog/nexttoremix</guid>
+            <pubDate>Sat, 25 May 2024 00:00:00 GMT</pubDate>
+            <description><![CDATA[NextからRemixに移行した時のメモ]]></description>
+            <content:encoded><![CDATA[<p>Next.js</p><p>Remix</p>]]></content:encoded>
+            <category>Next.js</category>
+            <category>Remix</category>
+        </item>
+        <item>
+            <title><![CDATA[オブジェクト指向UI(OOUI)デザイン4章レベル1まで読んだのでメモ]]></title>
+            <link>https://nash1111rgba.com/blog/ooui_part1</link>
+            <guid>https://nash1111rgba.com/blog/ooui_part1</guid>
+            <pubDate>Sat, 06 Jul 2024 00:00:00 GMT</pubDate>
+            <description><![CDATA[オブジェクト指向UI(OOUI)デザイン4章レベル1まで読んだのでメモ]]></description>
+            <content:encoded><![CDATA[<p>Design</p><p>Frontend</p><p>NEED_HELP</p>]]></content:encoded>
+            <category>Design</category>
+            <category>Frontend</category>
+            <category>NEED_HELP</category>
+        </item>
+        <item>
+            <title><![CDATA[Playwrightでスマホ幅のスクリーンショットを取りました]]></title>
+            <link>https://nash1111rgba.com/blog/e2ewithiphone</link>
+            <guid>https://nash1111rgba.com/blog/e2ewithiphone</guid>
             <pubDate>Sun, 23 Jun 2024 00:00:00 GMT</pubDate>
-            <description><![CDATA[自動レビュワーであるpr-agentの導入記録]]></description>
+            <description><![CDATA[Playwrightでスマホ幅のスクリーンショットを取りました]]></description>
+            <content:encoded><![CDATA[<p>Playwright</p>]]></content:encoded>
+            <category>Playwright</category>
+        </item>
+        <item>
+            <title><![CDATA[Rustのフレームワーク色々試したい時はShuttleがおすすめです]]></title>
+            <link>https://nash1111rgba.com/blog/shuttleaxum</link>
+            <guid>https://nash1111rgba.com/blog/shuttleaxum</guid>
+            <pubDate>Sun, 23 Jun 2024 00:00:00 GMT</pubDate>
+            <description><![CDATA[shuttleの紹介]]></description>
+            <content:encoded><![CDATA[<p>Rust</p><p>Shuttle</p>]]></content:encoded>
+            <category>Rust</category>
+            <category>Shuttle</category>
+        </item>
+        <item>
+            <title><![CDATA[このブログにRSSを追加しました]]></title>
+            <link>https://nash1111rgba.com/blog/addedrss</link>
+            <guid>https://nash1111rgba.com/blog/addedrss</guid>
+            <pubDate>Sat, 29 Jun 2024 00:00:00 GMT</pubDate>
+            <description><![CDATA[RSS追加]]></description>
+            <content:encoded><![CDATA[<p>Remix</p>]]></content:encoded>
+            <category>Remix</category>
+        </item>
+        <item>
+            <title><![CDATA[pr-agentのレビューを抑制しました]]></title>
+            <link>https://nash1111rgba.com/blog/stoptoomuchreview</link>
+            <guid>https://nash1111rgba.com/blog/stoptoomuchreview</guid>
+            <pubDate>Sat, 06 Jul 2024 00:00:00 GMT</pubDate>
+            <description><![CDATA[pr-agentのレビューを抑制しました]]></description>
             <content:encoded><![CDATA[<p>AI</p><p>GitHubActions</p>]]></content:encoded>
             <category>AI</category>
             <category>GitHubActions</category>
@@ -46,14 +96,13 @@
             <category>NEED_HELP</category>
         </item>
         <item>
-            <title><![CDATA[Rustのフレームワーク色々試したい時はShuttleがおすすめです]]></title>
-            <link>https://nash1111rgba.com/blog/shuttleaxum</link>
-            <guid>https://nash1111rgba.com/blog/shuttleaxum</guid>
+            <title><![CDATA[Playwrightでスマホ幅のスクリーンショットを取りました]]></title>
+            <link>https://nash1111rgba.com/blog/first_saas_stack</link>
+            <guid>https://nash1111rgba.com/blog/first_saas_stack</guid>
             <pubDate>Sun, 23 Jun 2024 00:00:00 GMT</pubDate>
-            <description><![CDATA[shuttleの紹介]]></description>
-            <content:encoded><![CDATA[<p>Rust</p><p>Shuttle</p>]]></content:encoded>
-            <category>Rust</category>
-            <category>Shuttle</category>
+            <description><![CDATA[Playwrightでスマホ幅のスクリーンショットを取りました]]></description>
+            <content:encoded><![CDATA[<p>Playwright</p>]]></content:encoded>
+            <category>Playwright</category>
         </item>
         <item>
             <title><![CDATA[EffectTSのPlaygroundが出てました]]></title>
@@ -63,6 +112,27 @@
             <description><![CDATA[EffectTSのPlaygroundが出てました]]></description>
             <content:encoded><![CDATA[<p>TypeScript</p>]]></content:encoded>
             <category>TypeScript</category>
+        </item>
+        <item>
+            <title><![CDATA[UIライブラリ作り始めました]]></title>
+            <link>https://nash1111rgba.com/blog/depslessui_part1</link>
+            <guid>https://nash1111rgba.com/blog/depslessui_part1</guid>
+            <pubDate>Thu, 29 Aug 2024 00:00:00 GMT</pubDate>
+            <description><![CDATA[UIライブラリ作り始めました]]></description>
+            <content:encoded><![CDATA[<p>Design</p><p>Frontend</p>]]></content:encoded>
+            <category>Design</category>
+            <category>Frontend</category>
+        </item>
+        <item>
+            <title><![CDATA[GitHubCLIでこのブログのタスク管理ページを作りました]]></title>
+            <link>https://nash1111rgba.com/blog/howtaskpagecreated</link>
+            <guid>https://nash1111rgba.com/blog/howtaskpagecreated</guid>
+            <pubDate>Tue, 04 Jun 2024 00:00:00 GMT</pubDate>
+            <description><![CDATA[gh issueコマンドの結果をshadcn/uiのデータテーブルにした]]></description>
+            <content:encoded><![CDATA[<p>GitHubCLI</p><p>shadcn/ui</p><p>Remix</p>]]></content:encoded>
+            <category>GitHubCLI</category>
+            <category>shadcn/ui</category>
+            <category>Remix</category>
         </item>
         <item>
             <title><![CDATA[VSCodeで定期git fetchとprune設定する]]></title>
@@ -85,45 +155,6 @@
             <category>GoLang</category>
         </item>
         <item>
-            <title><![CDATA[個人ブログをNextからRemixに移行しました]]></title>
-            <link>https://nash1111rgba.com/blog/nexttoremix</link>
-            <guid>https://nash1111rgba.com/blog/nexttoremix</guid>
-            <pubDate>Sat, 25 May 2024 00:00:00 GMT</pubDate>
-            <description><![CDATA[NextからRemixに移行した時のメモ]]></description>
-            <content:encoded><![CDATA[<p>Next.js</p><p>Remix</p>]]></content:encoded>
-            <category>Next.js</category>
-            <category>Remix</category>
-        </item>
-        <item>
-            <title><![CDATA[GitHubCLIでこのブログのタスク管理ページを作りました]]></title>
-            <link>https://nash1111rgba.com/blog/howtaskpagecreated</link>
-            <guid>https://nash1111rgba.com/blog/howtaskpagecreated</guid>
-            <pubDate>Tue, 04 Jun 2024 00:00:00 GMT</pubDate>
-            <description><![CDATA[gh issueコマンドの結果をshadcn/uiのデータテーブルにした]]></description>
-            <content:encoded><![CDATA[<p>GitHubCLI</p><p>shadcn/ui</p><p>Remix</p>]]></content:encoded>
-            <category>GitHubCLI</category>
-            <category>shadcn/ui</category>
-            <category>Remix</category>
-        </item>
-        <item>
-            <title><![CDATA[このブログにRSSを追加しました]]></title>
-            <link>https://nash1111rgba.com/blog/addedrss</link>
-            <guid>https://nash1111rgba.com/blog/addedrss</guid>
-            <pubDate>Sat, 29 Jun 2024 00:00:00 GMT</pubDate>
-            <description><![CDATA[RSS追加]]></description>
-            <content:encoded><![CDATA[<p>Remix</p>]]></content:encoded>
-            <category>Remix</category>
-        </item>
-        <item>
-            <title><![CDATA[Playwrightでスマホ幅のスクリーンショットを取りました]]></title>
-            <link>https://nash1111rgba.com/blog/e2ewithiphone</link>
-            <guid>https://nash1111rgba.com/blog/e2ewithiphone</guid>
-            <pubDate>Sun, 23 Jun 2024 00:00:00 GMT</pubDate>
-            <description><![CDATA[Playwrightでスマホ幅のスクリーンショットを取りました]]></description>
-            <content:encoded><![CDATA[<p>Playwright</p>]]></content:encoded>
-            <category>Playwright</category>
-        </item>
-        <item>
             <title><![CDATA[Remixにshadcn/ui導入した際のメモ]]></title>
             <link>https://nash1111rgba.com/blog/addshadcnonremix</link>
             <guid>https://nash1111rgba.com/blog/addshadcnonremix</guid>
@@ -135,36 +166,14 @@
             <category>Frontend</category>
         </item>
         <item>
-            <title><![CDATA[pr-agentのレビューを抑制しました]]></title>
-            <link>https://nash1111rgba.com/blog/stoptoomuchreview</link>
-            <guid>https://nash1111rgba.com/blog/stoptoomuchreview</guid>
-            <pubDate>Sat, 06 Jul 2024 00:00:00 GMT</pubDate>
-            <description><![CDATA[pr-agentのレビューを抑制しました]]></description>
+            <title><![CDATA[このブログのレポジトリにpr-agent入れてみました]]></title>
+            <link>https://nash1111rgba.com/blog/pragent</link>
+            <guid>https://nash1111rgba.com/blog/pragent</guid>
+            <pubDate>Sun, 23 Jun 2024 00:00:00 GMT</pubDate>
+            <description><![CDATA[自動レビュワーであるpr-agentの導入記録]]></description>
             <content:encoded><![CDATA[<p>AI</p><p>GitHubActions</p>]]></content:encoded>
             <category>AI</category>
             <category>GitHubActions</category>
-        </item>
-        <item>
-            <title><![CDATA[実装、WF作成、デザインで自分が気をつけていること]]></title>
-            <link>https://nash1111rgba.com/blog/whaticareabout</link>
-            <guid>https://nash1111rgba.com/blog/whaticareabout</guid>
-            <pubDate>Fri, 14 Jun 2024 00:00:00 GMT</pubDate>
-            <description><![CDATA[気をつけていることリスト]]></description>
-            <content:encoded><![CDATA[<p>Design</p><p>Backend</p><p>Frontend</p>]]></content:encoded>
-            <category>Design</category>
-            <category>Backend</category>
-            <category>Frontend</category>
-        </item>
-        <item>
-            <title><![CDATA[オブジェクト指向UI(OOUI)デザイン4章レベル1まで読んだのでメモ]]></title>
-            <link>https://nash1111rgba.com/blog/ooui_part1</link>
-            <guid>https://nash1111rgba.com/blog/ooui_part1</guid>
-            <pubDate>Sat, 06 Jul 2024 00:00:00 GMT</pubDate>
-            <description><![CDATA[オブジェクト指向UI(OOUI)デザイン4章レベル1まで読んだのでメモ]]></description>
-            <content:encoded><![CDATA[<p>Design</p><p>Frontend</p><p>NEED_HELP</p>]]></content:encoded>
-            <category>Design</category>
-            <category>Frontend</category>
-            <category>NEED_HELP</category>
         </item>
     </channel>
 </rss>
