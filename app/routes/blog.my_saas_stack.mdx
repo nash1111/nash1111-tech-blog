@@ -1,0 +1,31 @@
+---
+title: 個人でローンチしたサービスの技術スタック整理 第一部
+description: saas intro part1
+published: 2025-04-27
+tags: ["Stripe", "Neon", "Prisma", "Hono", "Clerk"]
+thumbnail: /blogthumbnails/18.jpg
+---
+
+## 動機
+個人開発で少し収益が出始めたので備忘録兼ねて状況を大まかに整理します  
+3月にリリースしました  
+
+## アプリの概要
+ユーザーに特定のエディタを提供  
+(詳細希望の場合DMください)  
+無料会員は一部機能が制限される  
+
+## 収益状況
+月間アクティブユーザー: 18人  
+課金ユーザー: 10人  
+
+## 維持費
+ドメイン代: 年約10$
+
+## 利用しているサービスと各々の責務
+CloudflareWorker: Honoでstripeとclerkをラップして、認証、認可、決済を行うAPIを提供する  
+CloudflarePages: ユーザーへの直接的な機能提供に利用、  
+Neon: DBに利用  
+Clerk: ユーザー管理、認証認可に利用    
+Stripe: 決済に利用  
+
