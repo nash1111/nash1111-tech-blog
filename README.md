@@ -1,6 +1,10 @@
-# Tech Blog with Remix, Bun and Cloudflare
+# Tech Blog with Astro and Cloudflare
 
 [Visit My Blog](https://nash1111rgba.com/blog)
+
+## Migration from Remix v2 to Astro
+
+This blog has been migrated from Remix v2 to Astro for better performance and developer experience.
 
 ## ViewTransition
 
