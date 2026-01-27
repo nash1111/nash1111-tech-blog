@@ -1,6 +1,5 @@
-import { Link } from "@remix-run/react";
 import { Card, CardContent, CardTitle } from "~/components/ui/card";
-import { Frontmatter } from "~/mdx";
+import type { Frontmatter } from "../mdx.d.ts";
 
 interface CardContentProps {
     path: string;
@@ -11,17 +10,17 @@ export function ContentCard({ path, frontmatter }: CardContentProps) {
     return (
         <div>
             <Card className="w-[320px] min-h-[360px] overflow-hidden border border-gray-200 flex flex-col justify-between">
-                <Link to={path} prefetch="intent" viewTransition>
+                <a href={path}>
                     <div
                         className="h-[160px] bg-cover bg-center"
                         style={{ backgroundImage: `url(${frontmatter.thumbnail})` }}
                     ></div>
-                </Link>
+                </a>
                 <CardContent className="p-4 flex flex-col justify-between flex-grow">
                     <CardTitle>
-                        <Link to={path} prefetch="intent" viewTransition>
+                        <a href={path}>
                             {frontmatter.title}
-                        </Link>
+                        </a>
                     </CardTitle>
                     <div className="grid gap-4">
                         <div>{frontmatter.published}</div>
