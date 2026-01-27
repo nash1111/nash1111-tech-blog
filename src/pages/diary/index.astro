@@ -1,0 +1,25 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { ContentCard } from '../../components/ContentCard';
+
+const diaryPosts = await Astro.glob('./*.mdx');
+const posts = diaryPosts
+  .filter(post => post.frontmatter)
+  .map(post => ({
+    path: `/diary/${post.file.split('/').pop()?.replace('.mdx', '')}`,
+    frontmatter: post.frontmatter
+  }));
+---
+
+<Layout title="Diary - nash1111">
+  <div class="p-10 flex flex-wrap gap-4 w-full justify-center">
+    {posts.map(post => (
+      <ContentCard 
+        key={post.path}
+        path={post.path} 
+        frontmatter={post.frontmatter}
+        client:load
+      />
+    ))}
+  </div>
+</Layout>

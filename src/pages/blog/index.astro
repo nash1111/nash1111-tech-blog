@@ -1,0 +1,33 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { BlogCard } from 'deps-less-ui';
+
+const blogPosts = await Astro.glob('./*.mdx');
+const posts = blogPosts
+  .filter(post => post.frontmatter)
+  .map(post => ({
+    url: `/blog/${post.file.split('/').pop()?.replace('.mdx', '')}`,
+    title: post.frontmatter.title,
+    thumbnail: post.frontmatter.thumbnail || '/default_ogp.png',
+    tags: post.frontmatter.tags || []
+  }))
+  .sort((a, b) => {
+    // Sort by published date if available
+    return 0;
+  });
+---
+
+<Layout title="Blog - nash1111">
+  <div class="p-10 flex flex-wrap gap-4 w-full justify-center">
+    {posts.map(post => (
+      <a href={post.url} key={post.url}>
+        <BlogCard 
+          title={post.title} 
+          imageUrl={post.thumbnail} 
+          tags={post.tags}
+          client:load
+        />
+      </a>
+    ))}
+  </div>
+</Layout>

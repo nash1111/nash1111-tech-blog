@@ -1,12 +1,10 @@
 {
+  "extends": "astro/tsconfigs/strict",
   "include": [
     "**/*.ts",
     "**/*.tsx",
     "**/*.d.ts",
-    "**/.server/**/*.ts",
-    "**/.server/**/*.tsx",
-    "**/.client/**/*.ts",
-    "**/.client/**/*.tsx"
+    "src/**/*"
   ],
   "compilerOptions": {
     "lib": [
@@ -15,8 +13,7 @@
       "ES2022"
     ],
     "types": [
-      "@remix-run/cloudflare",
-      "vite/client",
+      "astro/client",
       "@cloudflare/workers-types/2023-07-01"
     ],
     "isolatedModules": true,
@@ -33,10 +30,9 @@
     "baseUrl": ".",
     "paths": {
       "~/*": [
-        "./app/*"
+        "./src/*"
       ]
     },
-    // Vite takes care of building everything, not tsc.
     "noEmit": true
   }
 }

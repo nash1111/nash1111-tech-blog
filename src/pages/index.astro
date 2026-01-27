@@ -1,0 +1,16 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { Button } from '../components/ui/button';
+import { AUTHOR_NAME, SITE_TITLE } from '../lib/const';
+---
+
+<Layout 
+  title={SITE_TITLE}
+  description="nash1111 techblog with Astro on Cloudflare Pages."
+>
+  <div style="font-family: system-ui, sans-serif; line-height: 1.8; padding: 24px">
+    <a href="/blog">
+      <Button variant="default" client:load>Blog</Button>
+    </a>
+  </div>
+</Layout>

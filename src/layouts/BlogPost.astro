@@ -1,0 +1,45 @@
+---
+import Layout from './Layout.astro';
+import { Button } from '../components/ui/button';
+import { BlogThumbnail } from '../components/BlogThumbnail';
+import { ChevronLeft, X } from 'lucide-react';
+
+interface Props {
+  frontmatter: {
+    title: string;
+    description?: string;
+    thumbnail?: string;
+    published?: string;
+    tags?: string[];
+  };
+}
+
+const { frontmatter } = Astro.props;
+const { title, description = 'No description', thumbnail = '/default_ogp.png' } = frontmatter;
+
+const currentUrl = new URL(Astro.url.pathname, Astro.site).href;
+const thumbnailUrl = new URL(thumbnail, Astro.site).href;
+const tweetUrl = `https://twitter.com/intent/tweet?url=${encodeURIComponent(currentUrl)}&text=${encodeURIComponent(title)}&via=nash1111_rgba`;
+---
+
+<Layout title={title} description={description} image={thumbnailUrl} url={currentUrl}>
+  <div class="p-10 prose md:container mx-auto">
+    <h2>{title}</h2>
+    <BlogThumbnail imagePath={thumbnail} height="320px" client:load />
+    <slot />
+    <div class="flex justify-between items-center">
+      <a href="/blog">
+        <Button variant="link" client:load>
+          <ChevronLeft className="w-4 h-4 mr-2" />
+          Back to BLOG
+        </Button>
+      </a>
+      <a href={tweetUrl} target="_blank" rel="noopener noreferrer">
+        <Button variant="link" client:load>
+          <X className="w-4 h-4 mr-2" />
+          Post on X
+        </Button>
+      </a>
+    </div>
+  </div>
+</Layout>

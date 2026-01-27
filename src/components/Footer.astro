@@ -1,0 +1,13 @@
+---
+// Footer component for Astro
+import { Rss } from "lucide-react";
+---
+
+<footer class="flex justify-center items-center p-4 bg-gradient-to-r from-cyan-500 to-blue-700">
+    <p class="text-white flex items-center">
+        © nash1111 
+        <a href="/rss.xml" class="ml-2">
+            <Rss client:load />
+        </a>
+    </p>
+</footer>

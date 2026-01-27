@@ -1,0 +1,68 @@
+---
+// Header component for Astro
+import { Button } from "../components/ui/button";
+import { NavigationMenu, NavigationMenuContent, NavigationMenuItem, NavigationMenuList, NavigationMenuTrigger } from "../components/ui/navigation-menu";
+
+const components: { id: number, title: string; href: string }[] = [
+    {
+        id: 1,
+        title: "Tasks",
+        href: "/task",
+    },
+    {
+        id: 2,
+        title: "Snippets",
+        href: "/snippets",
+    },
+    {
+        id: 3,
+        title: "Old Blog",
+        href: "https://nash1111-old-blog.pages.dev/"
+    },
+    {
+        id: 4,
+        title: "About",
+        href: "/about",
+    },
+    {
+        id: 5,
+        title: "Contact",
+        href: "/contact",
+    }
+];
+---
+
+<header class="flex justify-between items-center p-4 bg-gradient-to-r from-cyan-500 to-blue-700">
+    <div class="flex gap-4">
+        <a href="/">
+            <Button variant="default" client:load>nash1111</Button>
+        </a>
+    </div>
+    <div class="flex gap-4">
+        <a href="/blog">
+            <Button variant="default" client:load>Blog</Button>
+        </a>
+        <a href="/diary">
+            <Button variant="default" client:load>Diary</Button>
+        </a>
+
+        <NavigationMenu client:load>
+            <NavigationMenuList>
+                <NavigationMenuItem>
+                    <NavigationMenuTrigger>Others</NavigationMenuTrigger>
+                    <NavigationMenuContent>
+                        <ul class="flex flex-col gap-3 p-2 overflow-x-auto">
+                            {components.map((component) => (
+                                <div class="break-words" key={component.id}>
+                                    <a href={component.href} class="max-w-xs">
+                                        <Button variant="default" size="sm" client:load>{component.title}</Button>
+                                    </a>
+                                </div>
+                            ))}
+                        </ul>
+                    </NavigationMenuContent>
+                </NavigationMenuItem>
+            </NavigationMenuList>
+        </NavigationMenu>
+    </div>
+</header>
