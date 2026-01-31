@@ -5,13 +5,13 @@
   "type": "module",
   "scripts": {
     "build": "astro build",
-    "deploy": "bun run build && wrangler pages deploy ./dist",
+    "deploy": "pnpm run build && wrangler pages deploy ./dist",
     "dev": "astro dev",
     "lint": "eslint --ignore-path .gitignore --cache --cache-location ./node_modules/.cache/eslint .",
     "start": "astro preview",
     "typecheck": "tsc",
     "typegen": "wrangler types",
-    "preview": "bun run build && astro preview",
+    "preview": "pnpm run build && astro preview",
     "cf-typegen": "wrangler types",
     "generate-task": "gh issue list --state all --json number,title,state,url,body > public/currentIssues.json && echo 'export const lastUpdated = \"'`date '+%Y-%m-%dT%H:%M:%S'`'\";' > public/lastUpdated.ts"
   },
